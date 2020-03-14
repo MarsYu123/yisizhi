@@ -144,7 +144,7 @@
             animation: zip 3s ease 1s infinite reverse;
           }
           &-3{
-            animation: shine 5s linear 1s infinite;
+            animation: swing 5s linear 1s infinite;
           } 
           &-4{
             animation: glint 2s linear 1s infinite
@@ -161,7 +161,7 @@
           &-cont{
             transform: rotateY(0) translateX(-50%);
           }
-          &-btn{
+          &-button{
             opacity: 1;
           }
         }

@@ -260,10 +260,7 @@ function rem2px(num) {
 
 $(function () {
   var winHeight = window.innerHeight;
-  var mySwiper;
-
-  if (isload) {
-    mySwiper = new Swiper('#content', {
+  var mySwiper = new Swiper('#content', {
       direction: 'vertical',
       // 垂直切换选项
       mousewheel: true,
@@ -276,7 +273,6 @@ $(function () {
         }
       }
     });
-  }
 
   var isClickNext = false;
   $(function () {
