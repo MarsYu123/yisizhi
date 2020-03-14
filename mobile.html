@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>移动端</title>
+    <link rel="stylesheet" href="./css/mobile.css">
+    <!-- <link rel="stylesheet" href="./css/style.css"> -->
+    <link rel="stylesheet" href="./css/swiper.min.css">
+</head>
+
+<body>
+    <div class="vertiv">
+        <div class="nav">
+            <div class="nav-logo">
+                <img src="./img/logo.png" alt="">
+            </div>
+            <div class="nav-right">
+                <div class="icon" id='icon'></div>
+                <div class="nav-list" id='nav-list'>
+                    <div class="bg"></div>
+                    <div class="nav-list-item">
+                        首页
+                    </div>
+                    <div class="nav-list-item">
+                        大会介绍
+                    </div>
+                    <div class="nav-list-item">
+                        线上展厅
+                    </div>
+                    <div class="nav-list-item">
+                        大会议程
+                    </div>
+                    <div class="nav-list-item">
+                        精彩回顾
+                    </div>
+                    <div class="nav-list-item">
+                        往届回顾
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-container" id='content'>
+            <div class="swiper-wrapper">
+                <div class="vertiv-item swiper-slide one">
+                    <div class="light">
+                        <img class="light-1 abs" src="./img/mobile/light_1.png" alt="">
+                        <img class="light-2 abs" src="./img/mobile/light_2.png" alt="">
+                        <img class="light-3 abs" src="./img/mobile/light_3.png" alt="">
+                        <img class="light-4 abs" src="./img/mobile/light_4.png" alt="">
+                    </div>
+                    <div class="vertiv-item-cont">
+                        <div class="img-2020 abs">
+                            <img src="./img/mobile/2020.png" alt="">
+                        </div>
+                        <div class="img-title abs">
+                            <img src="./img/mobile/page1_title.png" alt="">
+                        </div>
+                        <div class="img-cont abs">
+                            <img src="./img/mobile/page1_text.png" alt="">
+                        </div>
+                        <div class="img-button abs">
+                            <img src="./img/mobile/page1_button.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="vertiv-item swiper-slide two">
+                    <div class="vertiv-item-cont">
+                        <div class="title abs">
+                            <img src="./img/mobile/page2_title.png" alt="">
+                        </div>
+                        <div class="cont abs">
+                            <div class="cont-title cont-img">
+                                <img src="./img/mobile/page2_cont_title.png" alt="">
+                            </div>
+                            <div class="cont-text cont-img">
+                                <img src="./img/mobile/page2_cont_text.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vertiv-item swiper-slide three">
+                    <div class="vertiv-item-cont">
+                        <div class="title abs">
+                            <img src="./img/mobile/page3_title.png" alt="">
+                        </div>
+                        <div class="btn-l btn abs">
+                            <img src="./img/mobile/page3_btn_l.png" alt="">
+                        </div>
+                        <div class="cont abs">
+                        </div>
+                        <div class="btn-r btn abs">
+                            <img src="./img/mobile/page3_btn_r.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="vertiv-item swiper-slide four">
+                    <div class="vertiv-item-cont">
+                        <div class="title abs">
+                            <img src="./img/mobile/page4_title.png" alt="">
+                        </div>
+                        <div class="agenda-time abs">
+                            3月26日
+                        </div>
+                        <div class="agenda abs">
+                            <div class="agenda-prev button agenda-wrapper-el"></div>
+                            <div class="agenda-next button agenda-wrapper-el"></div>
+                            <div class="swiper-container agenda-wrapper-el" id='agendaSwiper'>
+                                <div class="swiper-wrapper agenda-wrapper">
+                                </div>
+                            </div>
+                            <div class="agenda-list"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vertiv-item swiper-slide five">
+                    <div class="vertiv-item-cont">
+                        <div class="title abs">
+                            <img src="./img/mobile/page5_title.png" alt="">
+                        </div>
+                        <div class="review abs">
+                            <div class="swiper-container" id='reviewSwiper'>
+                                <div class="swiper-wrapper review-wrapper">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vertiv-item swiper-slide six">
+                    <div class="vertiv-item-cont">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="./js/jquery.min.js"></script>
+<script src="./js/swiper.min.js"></script>
+<script>
+    var agendaList = [{
+        title: '开场视频',
+        time: '14:00-14:02',
+        name: '',
+        position: ''
+    }, {
+        title: '主持人开场',
+        time: '14:02-14:05',
+        name: '晁晋',
+        position: '维谛技术大中华区行业销售部高级总监'
+    }, {
+        title: '《维心聚力·共谛未来》',
+        time: '14:05-14:15',
+        name: '祝金程',
+        position: '维谛技术北亚区总裁'
+    }, {
+        title: '《坚守底层规律，加速认知升级&能力迭代》',
+        time: '14:15-14:55',
+        name: '田军',
+        position: '维谛技术大中华区市场营销&产品应用副总裁'
+    }, {
+        title: '荣誉奖颁奖',
+        time: '14:55-15:00',
+        name: '',
+        position: ''
+    }, {
+        title: '《转危为机，紧抓机遇，与子成说，执手共赢》',
+        time: '15:00-15:40',
+        name: '崔益彬',
+        position: '维谛技术大中华区销售副总裁'
+    }, {
+        title: '荣誉奖颁奖',
+        time: '15:40-15:45',
+        name: '',
+        position: ''
+    }, {
+        title: '《以服务粘客户，以合作谋发展》',
+        time: '15:45-16:25',
+        name: '丁麒钢',
+        position: '维谛技术大中华区服务副总裁 '
+    }, {
+        title: '待定',
+        time: '16:25-16:35',
+        name: '果巍',
+        position: '北京艾瑞信系统工程技术有限责任公司总经理'
+    }, {
+        title: '《分销销售：小中有大、大有可为》',
+        time: '16:35-16:45',
+        name: '盛伟',
+        position: '杭州雷创科技有限公司总经理'
+    }, {
+        title: '《整合行业资源 从0到1突破》',
+        time: '16:45-16:55',
+        name: '谭捷',
+        position: '北京意科瑞思能源技术有限公司总经理'
+    }, {
+        title: '荣誉奖颁奖',
+        time: '16:55-17:00',
+        name: '',
+        position: ''
+    }, {
+        title: '现场答疑',
+        time: '17:00-17:15',
+        name: '',
+        position: ''
+    }, {
+        title: '幸运抽奖',
+        time: '17:15-17:25',
+        name: '',
+        position: ''
+    }];
+
+    var reviewList = [{
+            msg: '石化行业关键设备和控制系统供电安全',
+            name: '田军1'
+        },
+        {
+            msg: '石化行业关键设备和控制系统供电安全',
+            name: '田军2'
+        },
+        {
+            msg: '石化行业关键设备和控制系统供电安全',
+            name: '田军3'
+        },
+        {
+            msg: '石化行业关键设备和控制系统供电安全',
+            name: '田军4'
+        },
+        {
+            msg: '石化行业关键设备和控制系统供电安全',
+            name: '田军5'
+        },
+        {
+            msg: '石化行业关键设备和控制系统供电安全',
+            name: '田军6'
+        },
+        {
+            msg: '石化行业关键设备和控制系统供电安全',
+            name: '田军7'
+        }
+    ]
+
+    function agendaItem(obj) {
+        return ' <div class="agenda-item"> ' + ' <div class="agenda-item-time"> ' + obj.time + '</div>' +
+            '<div class="agenda-item-info">' + '<div class="agenda-item-info-title">' + obj.title + '</div>' +
+            '<div class="agenda-item-info-person">' + '<div class="name">' + obj.name + '</div>' +
+            '<div class="position">' + obj.position + '</div>' + '</div>' + '</div>' + '</div>';
+    }
+
+    function reviewItem(obj = {}) {
+        let _class = !obj.name ? 'none' : ''
+        return '<div class="review-item ' + _class + '">' +
+            '<div class="review-item-img">' +
+            '<img src="' + obj.img + '" alt="">' +
+            '</div>' +
+            '<div class="review-item-info">' +
+            '<div class="msg">' +
+            obj.msg +
+            '</div>' +
+            '<div class="name">' +
+            '——' + obj.name +
+            '</div>' +
+            '</div>' +
+            '</div>'
+    }
+
+    function rem2px(num) {
+        return num * 100 * ($(window).width() / 750)
+    }
+
+
+    $(function () {
+        loading().then((res)=>{
+            alert('图片加载完毕')
+        })
+        var winHeight = window.innerHeight;
+        var mySwiper = new Swiper('#content', {
+            direction: 'vertical',
+            // 垂直切换选项
+            mousewheel: true,
+            //开启滚轮
+            height: winHeight,
+            slidesPerView: 'auto',
+            on: {
+                slideChangeTransitionEnd: function () {
+                    slideChange(this.activeIndex);
+                },
+                init: function init() {
+                    slideInit();
+                }
+            }
+        });
+        var isClickNext = false;
+
+        $(function () {
+            $(document).click(function (e) {
+                var e = e || window.event;
+                var elem = e.target || e.srcElement;
+                while (elem) {
+                    if (elem.id && elem.id == 'nav-list' || elem.id && elem.id == 'icon') {
+                        return;
+                    }
+                    elem = elem.parentNode;
+                }
+                $('.nav-list').fadeOut()
+            });
+
+            $('.nav-right').on("click", ".icon", function () {
+                $(this).next().fadeToggle()
+            }).on('click', '.nav-list-item', function () {
+                $('.nav-list').fadeOut()
+                slideChange($(this).index() - 1, 'nav')
+            })
+            $('.agenda-next').click(function () {
+                isClickNext = false
+                $(this).removeClass('animate')
+            })
+        })
+
+
+        agendaInit(agendaList);
+
+        function agendaInit(agendaList) {
+            var num = 9; // 一页最多显示数量
+            var $agendaBox = $('.agenda');
+
+            if (agendaList.length > num) {
+                var page = agendaList.length % num > 0 ? parseInt(agendaList.length / num) + 1 : parseInt(
+                    agendaList
+                    .length / num);
+                var index = 0;
+
+                for (var i = 0; i < page; i++) {
+                    var $box = $('<div class="swiper-slide"><div class="agenda-list"></div></div>');
+                    $box.appendTo('.agenda-wrapper');
+
+                    (function ($box, i) {
+                        var slice = agendaList.slice(i * num, i * num + num);
+                        slice.forEach(function (res) {
+                            $box.find('.agenda-list').append(agendaItem(res));
+                        });
+                    })($box, i);
+                }
+
+                var agendaSwiper = new Swiper('#agendaSwiper', {
+                    // autoplay: true,
+                    // loop: true, // 循环模式选项
+                    slidesPerView: 'auto',
+                    spaceBetween: 20,
+                    navigation: {
+                        nextEl: '.agenda-next',
+                        prevEl: '.agenda-prev'
+                    },
+                    on: {
+                        slideNextTransitionStart: function () {
+                            $('.agenda-next').removeClass('animate')
+                        }
+                    }
+
+                });
+            } else {
+                agendaList.forEach(function (res) {
+                    $(".agenda").children('.agenda-list').append(agendaItem(res));
+                    $(".agenda-wrapper-el").hide();
+                });
+            }
+        }
+        reviewInit(reviewList)
+
+        function reviewInit(data) {
+            var num = 0
+            var arr = [
+                []
+            ]
+            data.forEach(function (res) {
+                var arrLength = arr.length
+                num++
+                if (num > 1) {
+                    num = 0
+                    arr.push([])
+                }
+                arr[arrLength - 1].push(reviewItem(res))
+            })
+            if (arr[arr.length - 1].length !== 2) arr[arr.length - 1].push(reviewItem())
+
+            arr.forEach(function (res) {
+                var $item = $('<div class="swiper-slide"></div>')
+                $item.appendTo('.review-wrapper');
+                (function ($item) {
+                    res.forEach(function (html) {
+                        $item.append(html)
+                    });
+                })($item)
+            })
+
+            $('.review-wrapper').append('<div class="swiper-slide"></div>')
+
+            var reviewSwiper = new Swiper('#reviewSwiper', {
+                slidesPerView: 'auto',
+                spaceBetween: rem2px(.53),
+                initialSlide: 0,
+                // loop: true,
+                // loopAdditionalSlides: 2,
+                // centeredSlidesBounds: true,
+                slidesOffsetBefore: rem2px(.53)
+
+            }); //  加载议程数据
+        }
+
+        function slideChange(index, type) {
+            // $(".nav-right").find('.nav-list-item').eq(index).addClass("active").siblings().removeClass("active");
+            $('.vertiv-item').eq(index).addClass('animate');
+
+            if (type === 'nav') {
+                mySwiper.slideTo(index);
+            }
+
+            if (index === 3 && !isClickNext) {
+                isClickNext = true
+                $('.agenda-next').addClass("animate")
+            }
+        }
+
+        function slideInit() {
+            $('.one').addClass("animate")
+        }
+
+        function loading() {
+            return new Promise((resolve) => {
+                var imgsNum = $('img').length
+                var i = 0;
+                $('img').each(function () {
+                    img = $(this)
+                    console.log(img)
+                    img.load(function () {
+                        ++i
+                        if (i === imgsNum) {
+                            resolve()
+                        }
+                    })
+                })
+            })
+        }
+    })
+</script>
+
+</html>
