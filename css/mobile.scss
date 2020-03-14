@@ -543,7 +543,7 @@
 
         .swiper {
           &-wrapper {
-            align-items: center;
+            align-items: center; 
           }
 
           &-slide {
@@ -557,11 +557,11 @@
             &-prev {
               transition: all .3s 1.2s;
             }
-
+ 
             &-active {
               transition: all .3s 1s;
             }
-
+ 
             &-next {
               transition: all .3s .8s;
             } */
@@ -601,14 +601,14 @@
             height: 2.73rem;
 
           }
-
+ 
           &-info {
             padding: 0 .29rem;
             box-sizing: border-box;
             color: #fff;
             overflow: hidden;
 
-            .msg {
+            .msg { 
               font-size: .24rem;
               margin-top: .18rem;
               margin-bottom: .17rem;
