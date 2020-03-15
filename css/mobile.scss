@@ -108,14 +108,14 @@
     &-cont{
       .title {
         transition: all 1s .5s;
-        transform: rotateY(90deg) translateX(-50%) !important;
+        opacity: 0;
         transform-origin: 0 0 ;
       }
     }
     &.animate{
       .vertiv-item-cont{
         .title{
-          transform: rotateY(0) translateX(-50%) !important;
+          opacity: 1;
         }
       }
     }
@@ -300,7 +300,8 @@
         height: 8.22rem;
         top: 2.82rem;
         @extend %conter;
-        transform: scale(0) translateX(-50%);
+        transform: translateY(-200%) translateX(-50%);
+        opacity: 0;
         transition: all .5s .9s;
         transform-origin: 0 50%;
       }
@@ -309,7 +310,7 @@
         top: 2.01rem;
         width: .55rem;
         left: .03rem;
-        transform: translateX(-100%);
+        transform: translateX(-200%);
         transition: all .5s .5s;
       }
 
@@ -317,12 +318,13 @@
         top: 9.81rem;
         width: .55rem;
         right: .06rem;
-        transform: translateX(100%);
+        transform: translateX(200%);
         transition: all .5s .5s;
       }
       &.animate{
         .cont{
-          transform: scale(1) translateX(-50%);
+          transform: translateY(0) translateX(-50%);
+          opacity: 1;
         }
         .btn{
           transform: translateX(0);
@@ -379,7 +381,7 @@
           transition: all .5s .5s;
         }
 
-        width: 6rem;
+        width: 6.2rem;
         height: 9.5rem;
         top: 3rem;
         @extend %conter;
@@ -479,7 +481,7 @@
               position: absolute;
               background: #220b04;
               box-sizing: border-box;
-              right: -.265rem;
+              left: 1.51rem;
               top: .12rem;
               z-index: 1;
               opacity: 0;
