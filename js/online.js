@@ -22,6 +22,7 @@ JSON 文件介绍
             "https://www.w3school.com.cn/i/movie.ogg",
             "http://vjs.zencdn.net/v/oceans.mp4"
           ],
+          video: '', //三级主视频
           file: [  // 三级菜单文件
             {
               title: '',  // 三级菜单文件名
@@ -64,6 +65,7 @@ $(function() {
             name: "往届回顾"
           }
         ],
+        isOpenNav: false,
         listIndex: 0,
         detailIndex: 0,
         page: "",
@@ -76,13 +78,26 @@ $(function() {
         viceVideo: null
       };
     },
-    created() {},
+    created() {
+      var pageName = this.pageName();
+      console.log(pageName);
+      try {
+        if (!IsPC()) {
+          window.location = "mobile_" + pageName + ".html" + location.search;
+        }
+        window.οnresize = function() {
+          if (!IsPC()) {
+            window.location = "mobile_" + pageName + ".html" + location.search;
+          }
+        };
+      } catch (err) {}
+    },
     mounted() {
       var that = this;
       that.listIndex = that.getQueryVariable("homeIndex");
       that.page = that.getQueryVariable("type");
       that.detailIndex = that.getQueryVariable("listIndex");
-      let pageName = that.pageName();
+      var pageName = that.pageName();
       if (
         (pageName === "online_list" && !that.listIndex) ||
         (pageName === "online_detail" && !that.detailIndex)
@@ -108,22 +123,44 @@ $(function() {
             that.activeList,
             JSON.parse(localStorage.getItem("pageActive")) || active
           );
-          if (
-            that.page === "detail" &&
-            that.onlineList[that.listIndex].list[that.detailIndex].detail.video
-          ) {
-            that.$nextTick(function() {
+
+          that.$nextTick(function() {
+            if (
+              that.page === "detail" &&
+              that.onlineList[that.listIndex].list[that.detailIndex].detail
+                .video
+            ) {
               that.mainVideo = videojs("example_video_1", {
                 controls: true,
                 loop: true,
                 preload: "auto"
               });
-            });
-          }
+            }
+
+            if (pageName === "mobile_online_list") {
+              new Swiper("#listSwiper", {
+                slidesPerView: 1,
+                centeredSlides: true,
+                centeredSlidesBounds: true,
+                centerInsufficientSlides: true,
+                spaceBetween: that.rem2px(-2.5),
+                slidesOffsetBefore: that.rem2px(1.56),
+                initialSlide: 1,
+                nested: true,
+                autoHeight: true
+              });
+            }
+          });
         }
       });
     },
     methods: {
+      openNav: function () {
+        this.isOpenNav = true
+      },
+      rem2px: function (num) {
+        return num * 100 * ($(window).width() / 750);
+      },
       getQueryVariable: function(variable) {
         var query = window.location.search.substring(1);
         var vars = query.split("&");
@@ -182,6 +219,11 @@ $(function() {
         this.viceVideo.dispose();
         this.viceVideo = null;
       }
-    }
+    },
+    // filters: {
+    //   rem2pxFilters: function (num) {
+        
+    //   }
+    // }
   });
 });

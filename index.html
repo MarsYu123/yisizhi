@@ -7,6 +7,17 @@
   <title>Title</title>
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/swiper.min.css">
+  <script src="./js/index.js"></script>
+  <script>
+        if (!IsPC()) {
+            window.location = "mobile.html"
+        }
+        window.οnresize = function () {
+            if (!IsPC()) {
+                window.location = "mobile.html"
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -218,6 +229,79 @@
               <div class="title abs">
                 <img src="./img/page6_title.png" alt="">
               </div>
+              <div class="review abs">
+                <div class="swiper-container" id='reYearSwiper'>
+                  <div class="swiper-wrapper review-wrapper">
+                    <div class="swiper-slide">
+                      <div class="review-item">
+                        <div class="review-item-img">
+                          <img src="" alt="">
+                        </div>
+                        <div class="review-item-title">
+                          sdasdsaddddddxxxxxxxxx
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="review-item">
+                        <div class="review-item-img">
+                          <img src="" alt="">
+                        </div>
+                        <div class="review-item-title">
+                          sdasdsaddddddxxxxxxxxx
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="review-item">
+                        <div class="review-item-img">
+                          <img src="" alt="">
+                        </div>
+                        <div class="review-item-title">
+                          sdasdsaddddddxxxxxxxxx
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="review-item">
+                        <div class="review-item-img">
+                          <img src="" alt="">
+                        </div>
+                        <div class="review-item-title">
+                          sdasdsaddddddxxxxxxxxx
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="review-item">
+                        <div class="review-item-img">
+                          <img src="" alt="">
+                        </div>
+                        <div class="review-item-title">
+                          sdasdsaddddddxxxxxxxxx
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="reYearNav">
+                  <div class="item">
+                    2019
+                  </div>
+                  <div class="item active">
+                    2018
+                  </div>
+                  <div class="item">
+                    2017
+                  </div>
+                  <div class="item">
+                    2016
+                  </div>
+                  <div class="item">
+                    2015
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -345,6 +429,26 @@
       } // loop: true
 
     }); //  加载议程数据
+
+    var reYearSwiper = new Swiper('#reYearSwiper', {
+      slidesPerView: 3,
+      centeredSlides: true,
+      centeredSlidesBounds: true,
+      centerInsufficientSlides: true,
+      spaceBetween: -250,
+      slidesOffsetBefore: -77,
+      initialSlide: 1,
+      nested: true,
+      on: {
+        slideChangeTransitionEnd: function () {
+          $('.reYearNav').children(".item").eq(this.activeIndex).addClass("active").siblings().removeClass('active')
+        }
+      }
+    });
+
+    $(".reYearNav").on("click",'.item',function () {
+      reYearSwiper.slideTo($(this).index())
+    })
 
     agendaInit(agendaList);
     $('.nav-right').on("click", '.nav-item', function () {

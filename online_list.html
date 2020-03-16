@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/swiper.min.css">
     <link rel="stylesheet" href="./css/video-js.min.css">
+    <script src="./js/index.js"></script>
     <script src="./js/jquery.min.js"></script>
     <script src="./js/vue.js"></script>
     <script src="./js/online.js"></script>
@@ -35,9 +36,6 @@
                 <i class=chat_i></i>
             </div>
             <div class="vertiv-online" v-if="onlineList.length">
-                <div class="chat">
-                    <i class=chat_i></i>
-                </div>
                 <div class="vertiv-online-video-list">
                     <div class="list-title">
                         {{onlineList[listIndex].title}}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>移动端</title>
+    <link rel="stylesheet" href="./css/mobile.css">
+    <link rel="stylesheet" href="./css/swiper.min.css">
+    <link rel="stylesheet" href="./css/video-js.min.css">
+    <script src="./js/swiper.min.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/vue.js"></script>
+    <script src="./js/online.js"></script>
+</head>
+
+<body>
+    <div class="vertiv">
+        <div id="app">
+            <div class="nav">
+                <div class="nav-logo">
+                    <img src="./img/logo.png" alt="">
+                </div>
+                <div class="nav-right">
+                    <div class="icon" id='icon' @click="openNav"></div>
+                    <div class="nav-list" id='nav-list' :style="isOpenNav?'display:block':''">
+                        <div class="bg"></div>
+                        <div class="nav-list-item" :class="{active:i.active}" v-for="i in nav">
+                            <a :href="i.active?'./online.html':'./index.html'">{{i.name}}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="vertiv-online" v-if="onlineList">
+                <div class="chat">
+                    <i class=chat_i></i>
+                </div>
+                <div class="vertiv-online-main" v-if="onlineList.length">
+                    <div class="main-title">
+                        {{onlineList[listIndex].list[detailIndex].title}}
+                    </div>
+                    <div class="main-detail-box">
+                        <div class="video">
+                            <video id="example_video_1" class="video-js vjs-default-skin vjs-big-play-centered"
+                                :width="rem2px(6.9)" :height="rem2px(4.3)"
+                                v-if="onlineList[listIndex].list[detailIndex].detail.video">
+                                <source :src="onlineList[listIndex].list[detailIndex].detail.video" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="detail-info">
+                            <template v-if='onlineList[listIndex].list[detailIndex].content'>
+                                <div class="title">
+                                    产品介绍
+                                </div>
+                                <div class="text" style="margin-bottom: 19px;">
+                                    {{onlineList[listIndex].list[detailIndex].content}}
+                                </div>
+                            </template>
+                            <template v-if='onlineList[listIndex].list[detailIndex].detail.about'>
+                                <div class="title">
+                                    相关产品视频
+                                </div>
+                                <div class="about">
+                                    <div class="img" v-for="i in onlineList[listIndex].list[detailIndex].detail.about"
+                                        @click="openVideo(i)">
+                                        <img src="" alt="">
+                                    </div>
+                                </div>
+                            </template>
+                            <div class="title">
+                                系统特点
+                            </div>
+                            <div class="text" v-html='onlineList[listIndex].list[detailIndex].detail.trait'></div>
+                            <div class="title">
+                                适用范围
+                            </div>
+                            <div class="text" v-html='onlineList[listIndex].list[detailIndex].detail.scope'></div>
+                            <div class="title">
+                                应用行业
+                            </div>
+                            <div class="text" v-html='onlineList[listIndex].list[detailIndex].detail.tmt'></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="openVideo" v-if="isOpenVideo">
+                    <div class="mb" @click="closeVideo"></div>
+                    <div class="video_box">
+                        <video id="aboutVideo" class="video-js vjs-default-skin vjs-big-play-centered" :width="rem2px(7.24)"
+                            :height="rem2px(4.53)">
+                            <source :src="openVideoSrc" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+</body>
+<script src="./js/video.min.js"></script>
+
+</html>

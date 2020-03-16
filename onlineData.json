@@ -1,6 +1,7 @@
-[{
+[
+    {
         "title": "Power Train",
-        "img": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1584265295579&di=3512890e36a2ea1b8ee46583757218b6&imgtype=0&src=http%3A%2F%2Fi2.hdslb.com%2Fbfs%2Farchive%2F5312bbd31eb278818052ffab9f2e113672454704.png",
+        "img": "",
         "list": [{
                 "title": "Vertiv Liebert APM160三合一智能电力模组",
                 "content": "",
@@ -13,7 +14,8 @@
                     "file": [{
                         "title": "这是下载文件",
                         "url": "https://www.baidu.com"
-                    }]
+                    }],
+                    "video": "http://vjs.zencdn.net/v/oceans.mp4"
                 }
             },
             {
@@ -40,7 +42,7 @@
     },
     {
         "title": "全时自然冷",
-        "img": "",
+        "img": "./img/online/page1_item_2.jpg",
         "list": [{
                 "title": "Vertiv Liebert CRV4S全变频自然冷却列间精密空调",
                 "content": "",
@@ -75,7 +77,7 @@
     },
     {
         "title": "智慧边缘",
-        "img": "",
+        "img": "./img/online/page1_item_3.jpg",
         "list": [{
                 "title": "Vertiv ITA2中功率机架式 UPS",
                 "content": "",
@@ -131,7 +133,7 @@
     },
     {
         "title": "智能制造",
-        "img": "",
+        "img": "./img/online/page1_item_4.jpg",
         "list": [{
                 "title": "Vertiv Liebert EPK2.0低压成套开关柜",
                 "content": "",
@@ -175,8 +177,8 @@
         ]
     },
     {
-        "title": "专网保护",
-        "img": "",
+        "title": "专网保障",
+        "img": "./img/online/page1_item_5.jpg",
         "list": [{
                 "title": "Vertiv SmartCabinet 2-E",
                 "content": "",
@@ -201,7 +203,7 @@
     },
     {
         "title": "服务4.0",
-        "img": "",
+        "img": "./img/online/page1_item_6.jpg",
         "list": [{
                 "title": "BIM+ 数据中心全生命周期服务与管理",
                 "content": "",
