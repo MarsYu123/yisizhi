@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/swiper.min.css">
+    <link rel="stylesheet" href="./css/video-js.min.css">
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/vue.js"></script>
+    <script src="./js/online.js"></script>
+</head>
+
+<body>
+    <div id="app">
+    <!-- <div class="mb"></div> -->
+    <div class="vertiv">
+        <div class="nav">
+            <div class="nav-box">
+                <div class="nav-logo">
+                    <img src="./img/logo.png" alt="">
+                </div>
+                <div class="nav-right">
+                    <div class="nav-item" :class="{active:i.active}" v-for="i in nav">
+                        <a :href="i.active?'./online.html':'./index.html'">{{i.name}}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="vertiv-online">
+            <div class="chat">
+                <i class=chat_i></i>
+            </div>
+            <div class="vertiv-online" v-if="onlineList.length">
+                <div class="chat">
+                    <i class=chat_i></i>
+                </div>
+                <div class="vertiv-online-video-list">
+                    <div class="list-title">
+                        {{onlineList[listIndex].title}}
+                    </div>
+                    <div class="list-box">
+                        <div class="list-box-cont">
+                            <div class="list-item" :class="{active: activeList['home_'+listIndex].son.indexOf(index) !== -1}" @click="toDetail(i,index)"
+                                v-for="(i,index) in onlineList[listIndex].list">
+                                <div class="mb" v-if="activeList['home_'+listIndex].son.indexOf(index) !== -1"></div>
+                                <div class="cont-box">
+                                    <div class="img">
+                                        <img :src="i.img" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <div class="title">
+                                            {{i.title}}
+                                        </div>
+                                        <div class="content">
+                                            {{i.content}}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+<script src="./js/video.min.js"></script>
+
+
+<script>
+    "use strict";
+</script>
+
+</html>
