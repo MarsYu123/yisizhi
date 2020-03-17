@@ -37,14 +37,15 @@
                     <i class=chat_i></i>
                 </div>
                 <div class="vertiv-online-main" v-if="onlineList.length">
+                    <a class="download" :href="'http://phptest.issmart.com.cn/pdf_view/web?url='+onlineList[listIndex].list[detailIndex].detail.file[0].url" v-if="onlineList[listIndex].list[detailIndex].detail.file">
+                    </a>
                     <div class="main-title">
                         {{onlineList[listIndex].list[detailIndex].title}}
                     </div>
                     <div class="main-detail-box">
-                        <div class="video">
+                        <div class="video" v-if="onlineList[listIndex].list[detailIndex].detail.video">
                             <video id="example_video_1" class="video-js vjs-default-skin vjs-big-play-centered"
-                                :width="rem2px(6.9)" :height="rem2px(4.3)"
-                                v-if="onlineList[listIndex].list[detailIndex].detail.video">
+                                :width="rem2px(6.9)" :height="rem2px(4.3)">
                                 <source :src="onlineList[listIndex].list[detailIndex].detail.video" type="video/mp4">
                             </video>
                         </div>

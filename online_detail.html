@@ -73,7 +73,7 @@
                                 </div>
                                 <div class="download">
                                     <div class="download-item" v-for="i in onlineList[listIndex].list[detailIndex].detail.file">
-                                        <i class="icon"></i>{{i.title}} <a class="view" :href="i.url" target="_blank"></i><a class="file_down" :href="i.url" target="_blank"></a>
+                                        <i class="icon"></i>{{i.title}} <a class="view" :href="'http://phptest.issmart.com.cn/pdf_view/web?url='+i.url" target="_blank"></i>
                                     </div>
                                 </div>
                             </template>

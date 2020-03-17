@@ -80,7 +80,6 @@ $(function() {
     },
     created() {
       var pageName = this.pageName();
-      console.log(pageName);
       try {
         if (!IsPC()) {
           window.location = "mobile_" + pageName + ".html" + location.search;
@@ -103,6 +102,14 @@ $(function() {
         (pageName === "online_detail" && !that.detailIndex)
       ) {
         location.replace("./online.html");
+        return "";
+      }
+
+      if (
+        (pageName === "mobile_online_list" && !that.listIndex) ||
+        (pageName === "mobile_online_detail" && !that.detailIndex)
+      ) {
+        location.replace("./mobile_online.html");
         return "";
       }
       $.ajax({

@@ -23,10 +23,10 @@
                     <img src="./img/logo.png" alt="">
                 </div>
                 <div class="nav-right">
-                    <div class="icon" id='icon'></div>
-                    <div class="nav-list" id='nav-list'>
+                    <div class="icon" id='icon' @click="openNav"></div>
+                    <div class="nav-list" id='nav-list' :style="isOpenNav?'display:block':''">
                         <div class="bg"></div>
-                        <div class="nav-item" :class="{active:i.active}" v-for="i in nav">
+                        <div class="nav-list-item" :class="{active:i.active}" v-for="i in nav">
                             <a :href="i.active?'./online.html':'./index.html'">{{i.name}}</a>
                         </div>
                     </div>

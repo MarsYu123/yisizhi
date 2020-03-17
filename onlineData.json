@@ -42,7 +42,7 @@
     },
     {
         "title": "全时自然冷",
-        "img": "./img/online/page1_item_2.jpg",
+        "img": "./img/online/page1_item_2.png",
         "list": [{
                 "title": "Vertiv Liebert CRV4S全变频自然冷却列间精密空调",
                 "content": "",
@@ -77,7 +77,7 @@
     },
     {
         "title": "智慧边缘",
-        "img": "./img/online/page1_item_3.jpg",
+        "img": "./img/online/page1_item_3.png",
         "list": [{
                 "title": "Vertiv ITA2中功率机架式 UPS",
                 "content": "",
@@ -133,7 +133,7 @@
     },
     {
         "title": "智能制造",
-        "img": "./img/online/page1_item_4.jpg",
+        "img": "./img/online/page1_item_4.png",
         "list": [{
                 "title": "Vertiv Liebert EPK2.0低压成套开关柜",
                 "content": "",
@@ -178,7 +178,7 @@
     },
     {
         "title": "专网保障",
-        "img": "./img/online/page1_item_5.jpg",
+        "img": "./img/online/page1_item_5.png",
         "list": [{
                 "title": "Vertiv SmartCabinet 2-E",
                 "content": "",
@@ -203,7 +203,7 @@
     },
     {
         "title": "服务4.0",
-        "img": "./img/online/page1_item_6.jpg",
+        "img": "./img/online/page1_item_6.png",
         "list": [{
                 "title": "BIM+ 数据中心全生命周期服务与管理",
                 "content": "",
