@@ -5,19 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport"
         content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-    <title>移动端</title>
-    <link rel="stylesheet" href="./css/mobile.css">
+    <title>2020Vertiv合作伙伴大会</title>
+    <!-- 在线客服依赖以下css和js文件,请按需引入 -->
+    <link rel="stylesheet" type="text/css"
+        href="https://php-api2.issmart.com.cn/fastadmin/public/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://php-api2.issmart.com.cn/fastadmin/public/assets/addons/kefu/css/kefu_default.css">
+    <link href="img/vertiv.png" rel="shortcut icon">
+    <script type="text/javascript"
+        src="https://php-api2.issmart.com.cn/fastadmin/public/assets/libs/jquery/dist/jquery.min.js">
+    </script>
+    <script type="text/javascript" src="https://php-api2.issmart.com.cn/fastadmin/public/assets/addons/kefu/js/kefu.js">
+    </script>
+    <script type="text/javascript"
+        src="https://php-api2.issmart.com.cn/fastadmin/public/assets/libs/fastadmin-layer/dist/layer.js">
+    </script>
+    <script type="text/javascript"
+        src="https://php-api2.issmart.com.cn/fastadmin/public/assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./css/mobile.css?v=2.5">
     <link rel="stylesheet" href="./css/swiper.min.css">
     <link rel="stylesheet" href="./css/video-js.min.css">
+    <script src="./js/index.js"></script>
     <script src="./js/swiper.min.js"></script>
-    <script src="./js/jquery.min.js"></script>
-    <script src="./js/vue.js"></script>
-    <script src="./js/online.js"></script>
+    <!-- <script src="./js/jquery.min.js"></script> -->
+    <script src="./js/vue.min.js"></script>
+    <script src="./js/online.js?v=1.1"></script>
 </head>
 
 <body>
     <div class="vertiv">
         <div id="app">
+            <publis_login v-if="showLogin" @submit="login" @clear="showLogin = false"></publis_login>
             <div class="nav">
                 <div class="nav-logo">
                     <img src="./img/logo.png" alt="">
@@ -26,39 +44,39 @@
                     <div class="icon" id='icon' @click="openNav"></div>
                     <div class="nav-list" id='nav-list' :style="isOpenNav?'display:block':''">
                         <div class="bg"></div>
-                        <div class="nav-list-item" :class="{active:i.active}" v-for="i in nav">
-                            <a :href="i.active?'./online.html':'./index.html'">{{i.name}}</a>
+                        <div class="nav-list-item" :class="{active:i.active}" v-for="(i,index) in nav">
+                            <a @click="toHome(index)">{{i.name}}</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="vertiv-online" v-if="onlineList">
-                <div class="chat">
+            <div class="vertiv-online" v-if="onlineList.length" v-show="onlineList.length" style="display: none;">
+                <div class="chat" @click="showLogin = true">
                     <i class=chat_i></i>
                 </div>
+                <div class="back" @click="javascript:window.history.back(-1)">
+                    <i></i>
+                </div>
                 <div class="vertiv-online-main" style="height:100%" v-if="onlineList.length">
-                    <div class="main-title">
-                        {{onlineList[listIndex].title}}
+                    <div class="main-title" v-html="onlineList[listIndex].title">
                     </div>
                     <div class="main-list-box">
                         <div class="swiper-container" id="listSwiper">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide" v-for="(i,index) in onlineList[listIndex].list">
                                     <div class="list-item"
-                                        :class="{active: activeList['home_'+listIndex].son.indexOf(index) !== -1}"
+                                        :class="{active: activeList['home_'+listIndex].indexOf(index) !== -1}"
                                         @click="toDetail(i,index)">
-                                        <div class="mb" v-if="activeList['home_'+listIndex].son.indexOf(index) !== -1">
+                                        <div class="mb" v-if="activeList['home_'+listIndex].indexOf(index) !== -1">
                                         </div>
                                         <div class="cont-box">
                                             <div class="img">
                                                 <img :src="i.img" alt="">
                                             </div>
                                             <div class="info">
-                                                <div class="title">
-                                                    {{i.title}}
+                                                <div class="title" v-html="i.title">
                                                 </div>
-                                                <div class="content">
-                                                    {{i.content}}
+                                                <div class="content" v-html="i.content">
                                                 </div>
                                             </div>
                                         </div>

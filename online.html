@@ -4,24 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <title>2020Vertiv合作伙伴大会</title>
+    <link href="img/vertiv.png" rel="shortcut icon">
     <link rel="stylesheet" href="./css/swiper.min.css">
     <link rel="stylesheet" href="./css/video-js.min.css">
-    <script src="./js/index.js"></script>
-    <script src="./js/jquery.min.js"></script>
-    <script src="./js/vue.js"></script>
-    <script src="./js/online.js"></script>
+    <!-- 在线客服依赖以下css和js文件,请按需引入 -->
+    <link rel="stylesheet" type="text/css" href="https://php-api2.issmart.com.cn/fastadmin/public/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://php-api2.issmart.com.cn/fastadmin/public/assets/addons/kefu/css/kefu_default.css">
+    <script type="text/javascript" src="https://php-api2.issmart.com.cn/fastadmin/public/assets/libs/jquery/dist/jquery.min.js">
+    </script>
+    <script type="text/javascript" src="https://php-api2.issmart.com.cn/fastadmin/public/assets/addons/kefu/js/kefu.js"></script>
+    <script type="text/javascript"
+        src="https://php-api2.issmart.com.cn/fastadmin/public/assets/libs/fastadmin-layer/dist/layer.js">
+    </script>
+    <script type="text/javascript"
+        src="https://php-api2.issmart.com.cn/fastadmin/public/assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
     <div id="app">
+        
         <!-- <div class="mb"></div> -->
         <div class="vertiv">
+            <input type="text" v-model="code">
+            <button @click="backDoor">登录</button>
             <div class="nav">
                 <div class="nav-box">
                     <div class="nav-logo">
                         <img src="./img/logo.png" alt="">
+                        <p @click="getEmailCode('zhengyu6211@gmail.com')">sssssss</p>
+                        <!-- <img src="./img/logo.png" alt=""> -->
                     </div>
                     <div class="nav-right">
                         <div class="nav-item" :class="{active:i.active}" v-for="i in nav">
@@ -36,8 +50,9 @@
                     <i class=chat_i></i>
                 </div>
                 <div class="vertiv-online-main">
-                    <div class="main-item" :class="{active: activeList['home_'+index].active}" @click="toList(i,index)"
-                        v-for="(i,index) in onlineList">
+                    <div class="main-item"
+                        :class="{active: activeList['home_'+index].length === onlineList[index].length}"
+                        @click="toList(i,index)" v-for="(i,index) in onlineList">
                         <div class="box">
                             <div class="img">
                                 <img :src="i.img" alt="">
@@ -51,7 +66,17 @@
             </div>
         </div>
     </div>
+    <style>
+        .vertiv-online-main {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
 </body>
 <script src="./js/video.min.js"></script>
+
+<script src="./js/index.js"></script>
+<script src="./js/vue.js"></script>
+<script src="./js/online.js"></script>
 
 </html>

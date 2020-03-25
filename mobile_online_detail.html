@@ -5,19 +5,42 @@
     <meta charset="UTF-8">
     <meta name="viewport"
         content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-    <title>移动端</title>
-    <link rel="stylesheet" href="./css/mobile.css">
+    <title>2020Vertiv合作伙伴大会</title>
+    <!-- 在线客服依赖以下css和js文件,请按需引入 -->
+    <link rel="stylesheet" type="text/css"
+        href="https://php-api2.issmart.com.cn/fastadmin/public/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://php-api2.issmart.com.cn/fastadmin/public/assets/addons/kefu/css/kefu_default.css">
+    <link href="img/vertiv.png" rel="shortcut icon">
+    <script type="text/javascript"
+        src="https://php-api2.issmart.com.cn/fastadmin/public/assets/libs/jquery/dist/jquery.min.js">
+    </script>
+    <script type="text/javascript" src="https://php-api2.issmart.com.cn/fastadmin/public/assets/addons/kefu/js/kefu.js">
+    </script>
+    <script type="text/javascript"
+        src="https://php-api2.issmart.com.cn/fastadmin/public/assets/libs/fastadmin-layer/dist/layer.js">
+    </script>
+    <script type="text/javascript"
+        src="https://php-api2.issmart.com.cn/fastadmin/public/assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./css/mobile.css?v=4.1">
     <link rel="stylesheet" href="./css/swiper.min.css">
     <link rel="stylesheet" href="./css/video-js.min.css">
+    <script src="./js/index.js"></script>
     <script src="./js/swiper.min.js"></script>
-    <script src="./js/jquery.min.js"></script>
-    <script src="./js/vue.js"></script>
-    <script src="./js/online.js"></script>
+    <!-- <script src="./js/jquery.min.js"></script> -->
+    <script src="./js/vue.min.js"></script>
+    <script src="./js/online.js?v=1.1"></script>
+    <style>
+        html,body{
+            background: #1f0a02;
+        }
+    </style>
 </head>
 
 <body>
     <div class="vertiv">
-        <div id="app">
+        <div id="app" v-show="onlineList.length" style="display: none;">
+            <publis_login v-if="showLogin" @submit="login" @clear="showLogin = false"></publis_login>
             <div class="nav">
                 <div class="nav-logo">
                     <img src="./img/logo.png" alt="">
@@ -26,27 +49,28 @@
                     <div class="icon" id='icon' @click="openNav"></div>
                     <div class="nav-list" id='nav-list' :style="isOpenNav?'display:block':''">
                         <div class="bg"></div>
-                        <div class="nav-list-item" :class="{active:i.active}" v-for="i in nav">
-                            <a :href="i.active?'./online.html':'./index.html'">{{i.name}}</a>
+                        <div class="nav-list-item" :class="{active:i.active}" v-for="(i,index) in nav">
+                            <a @click="toHome(index)">{{i.name}}</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="vertiv-online" v-if="onlineList">
-                <div class="chat">
+                <div class="chat" @click="showLogin = true">
                     <i class=chat_i></i>
                 </div>
-                <div class="vertiv-online-main" v-if="onlineList.length">
-                    <a class="download" :href="'http://phptest.issmart.com.cn/pdf_view/web?url='+onlineList[listIndex].list[detailIndex].detail.file[0].url" v-if="onlineList[listIndex].list[detailIndex].detail.file">
-                    </a>
-                    <div class="main-title">
-                        {{onlineList[listIndex].list[detailIndex].title}}
+                <div class="back" @click="javascript:window.history.go(-1)">
+                    <i></i>
+                </div>
+                <div class="vertiv-online-main detail" v-if="onlineList.length">
+                    <div class="main-title" v-html="onlineList[listIndex].list[detailIndex].title">
                     </div>
                     <div class="main-detail-box">
                         <div class="video" v-if="onlineList[listIndex].list[detailIndex].detail.video">
-                            <video id="example_video_1" class="video-js vjs-default-skin vjs-big-play-centered"
-                                :width="rem2px(6.9)" :height="rem2px(4.3)">
-                                <source :src="onlineList[listIndex].list[detailIndex].detail.video" type="video/mp4">
+                            <video id="example_video_1" class="video-js vjs-default-skin vjs-big-play-centered" :width="rem2px(6.9)" :height="rem2px(3.46)" :poster='onlineList[listIndex].list[detailIndex].detail.cover'>
+                                <source
+                                    :src="onlineList[listIndex].list[detailIndex].detail.video"
+                                    type="application/x-mpegURL">
                             </video>
                         </div>
                         <div class="detail-info">
@@ -54,8 +78,8 @@
                                 <div class="title">
                                     产品介绍
                                 </div>
-                                <div class="text" style="margin-bottom: 19px;">
-                                    {{onlineList[listIndex].list[detailIndex].content}}
+                                <div class="text" style="margin-bottom: 19px;"
+                                    v-html="onlineList[listIndex].list[detailIndex].detail.info || onlineList[listIndex].list[detailIndex].content">
                                 </div>
                             </template>
                             <template v-if='onlineList[listIndex].list[detailIndex].detail.about'>
@@ -86,18 +110,25 @@
                 </div>
             </div>
             <div class="openVideo" v-if="isOpenVideo">
-                    <div class="mb" @click="closeVideo"></div>
-                    <div class="video_box">
-                        <video id="aboutVideo" class="video-js vjs-default-skin vjs-big-play-centered" :width="rem2px(7.24)"
-                            :height="rem2px(4.53)">
-                            <source :src="openVideoSrc" type="video/mp4">
-                        </video>
-                    </div>
+                <div class="mb" @click="closeVideo"></div>
+                <div class="video_box">
+                    <video id="aboutVideo" class="video-js vjs-default-skin vjs-big-play-centered" :width="rem2px(7.24)"
+                        :height="rem2px(4.53)">
+                        <source :src="openVideoSrc"
+                            type="video/mp4">
+                    </video>
                 </div>
+            </div>
+            <div class="download" v-if="onlineList.length && onlineList[listIndex].list[detailIndex].detail.file">
+                <i class="icon_file"></i>
+                <p>{{onlineList[listIndex].list[detailIndex].detail.file[0].title}}</p>
+                <a :href="'https://php-api2.issmart.com.cn/pdf_view/web?url=https://php-api2.issmart.com.cn/2020vertivdata/线上展厅/'+onlineList[listIndex].list[detailIndex].detail.file[0].url" class="view"></a>
+                <a :href="'https://php-api2.issmart.com.cn/pdf_view/web?url=https://php-api2.issmart.com.cn/2020vertivdata/线上展厅/'+onlineList[listIndex].list[detailIndex].detail.file[0].url" class="down"></a>
+            </div>
         </div>
     </div>
 
 </body>
 <script src="./js/video.min.js"></script>
-
+<script src="./js/videojs-contrib-hls.min.js"></script>
 </html>

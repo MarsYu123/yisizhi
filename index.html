@@ -4,329 +4,443 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Title</title>
-  <link rel="stylesheet" href="./css/style.css">
+  <title>2020Vertiv合作伙伴大会</title>
+  <!-- 在线客服依赖以下css和js文件,请按需引入 -->
+  <link rel="stylesheet" type="text/css"
+    href="https://php-api2.issmart.com.cn/fastadmin/public/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://php-api2.issmart.com.cn/fastadmin/public/assets/addons/kefu/css/kefu_default.css">
+  <script type="text/javascript" src="https://cdn.polyfill.io/v2/polyfill.min.js?features=es6"></script>
+  <script type="text/javascript"
+    src="https://php-api2.issmart.com.cn/fastadmin/public/assets/libs/jquery/dist/jquery.min.js">
+  </script>
+  <script type="text/javascript"
+    src="https://php-api2.issmart.com.cn/fastadmin/public/assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript"
+    src="https://php-api2.issmart.com.cn/fastadmin/public/assets/libs/fastadmin-layer/dist/layer.js">
+  </script>
+  <script type="text/javascript" src="https://php-api2.issmart.com.cn/fastadmin/public/assets/addons/kefu/js/kefu.js">
+  </script>
+  <link href="img/vertiv.png" rel="shortcut icon">
+  <link rel="stylesheet" href="./css/style.css?v=1.1">
   <link rel="stylesheet" href="./css/swiper.min.css">
   <script src="./js/index.js"></script>
   <script>
-        if (!IsPC()) {
-            window.location = "mobile.html"
-        }
-        window.οnresize = function () {
-            if (!IsPC()) {
-                window.location = "mobile.html"
-            }
-        }
-    </script>
+    if (!IsPC()) {
+      window.location = "mobile.html"
+    }
+    window.οnresize = function () {
+      if (!IsPC()) {
+        window.location = "mobile.html"
+      }
+    }
+  </script>
+  <script>
+    function isIE() { //ie?
+      if (!!window.ActiveXObject || "ActiveXObject" in window)
+        return true;
+      else
+        return false;
+    }
+    if(isIE()){
+      document.write('<div class="ie_text" style="display:block">您的当前浏览器无法正常显示该网站内容，建议使用以下浏览器，以获得最佳体验：Chrmoe43+以上版本、FireFox38+以上版本、EDGE。</div>')
+    }
+  </script>
 </head>
 
 <body>
-  <div class="mb"></div>
-  <div class="vertiv">
-    <div class="nav">
-      <div class="nav-box">
-        <div class="nav-logo">
-          <img src="./img/logo.png" alt="">
-        </div>
-        <div class="nav-right">
-          <div class="nav-item active">
-            首页
+  <div id="app">
+
+    <publis_login v-if="showLogin" @submit="login" @clear="showLogin = false"></publis_login>
+    <div class="mb"></div>
+    <div class="vertiv">
+      <div class="nav">
+        <div class="nav-box">
+          <div class="nav-logo">
+            <img src="./img/logo.png" alt="">
           </div>
-          <div class="nav-item">
-            大会介绍
-          </div>
-          <div class="nav-item">
-            线上展厅
-          </div>
-          <div class="nav-item">
-            大会议程
-          </div>
-          <div class="nav-item">
-            精彩回顾
-          </div>
-          <div class="nav-item">
-            往届回顾
+          <div class="nav-right" style="display: none;">
+            <div class="nav-item">
+              首页
+            </div>
+            <div class="nav-item">
+              大会介绍
+            </div>
+            <div class="nav-item">
+              线上展厅
+            </div>
+            <div class="nav-item">
+              大会议程
+            </div>
+            <div class="nav-item" v-if="openReYery">
+              精彩回顾
+            </div>
+            <div class="nav-item">
+              往届回顾
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="vertiv-content">
-      <div class="swiper-container" id='content'>
-        <div class="swiper-wrapper">
-          <div class="vertiv-item swiper-slide one">
-            <div class="light-box">
-              <img src="./img/light1.png" alt="" class="light1 abs">
-              <img src="./img/light2.png" alt="" class="light2 abs">
-              <img src="./img/light3.png" alt="" class="light3 abs">
-              <img src="./img/light4.png" alt="" class="light4 abs">
-              <img src="./img/light5.png" alt="" class="light5 abs">
-              <img src="./img/light6.png" alt="" class="light6 abs">
-              <img src="./img/light7.png" alt="" class="light7 abs">
-            </div>
-            <div class="vertiv-item-box">
-              <div class="year abs">
-                <img src="./img/page1_2020.png" alt="">
-                <img src="./img/light_2020.png" alt="" class="light20 abs">
+      <div class="vertiv-content">
+        <div class="swiper-container" id='content'>
+          <div class="swiper-wrapper">
+            <div class="vertiv-item swiper-slide one">
+              <div class="light-box">
+                <img src="./img/light1.png" alt="" class="light1 abs">
+                <img src="./img/light2.png" alt="" class="light2 abs">
+                <img src="./img/light3.png" alt="" class="light3 abs">
+                <img src="./img/light4.png" alt="" class="light4 abs">
+                <img src="./img/light5.png" alt="" class="light5 abs">
+                <img src="./img/light6.png" alt="" class="light6 abs">
+                <img src="./img/light7.png" alt="" class="light7 abs">
               </div>
-              <div class="title abs">
-                <img src="./img/page1_title.png" alt="">
-              </div>
-              <div class="vertiv_title abs">
-                <img src="./img/page1_vertiv_title.png" alt="">
-              </div>
-              <div class="play abs">
-                <img src="./img/play.png" alt="">
-              </div>
+              <div class="vertiv-item-box">
+                <div class="year abs">
+                  <img src="./img/page1_2020.png" alt="">
+                </div>
+                <div class="title abs">
+                  <img src="./img/page1_title.png" alt="">
+                </div>
+                <div class="vertiv_title abs">
+                  <img src="./img/page1_vertiv_title.png" alt="">
+                </div>
+                <div class="btn_box abs">
+                  <div class="play" :class="{ban:!isPlay}">
+                    <a @click="toPlay"><img src="./img/play.png" alt=""></a>
+                    <p>3月26日（周四）13:00开放</p>
+                  </div>
+                  <div class="online" id='toOnline'>
+                    <img src="./img/online.png" alt="">
+                    <p>3月23日（周一）09:00开放 </p>
+                  </div>
+                </div>
 
-            </div>
-          </div>
-          <div class="vertiv-item swiper-slide two">
-            <div class="vertiv-item-box">
-              <div class="title abs">
-                <img src="./img/page2_title.png" alt="">
-              </div>
-              <div class="textBox abs">
-                <div class="textBox-main">
-                  <div class="textBox-title">
-                    <img src="./img/page2_text_title.png" alt="">
-                  </div>
-                  <div class="textBox-cont">
-                    <img src="./img/page2_text_content.png" alt="">
-                  </div>
-                </div>
-                <div class="button abs">
-                  <img src="./img/button.png" alt="">
-                </div>
               </div>
             </div>
-          </div>
-          <div class="vertiv-item swiper-slide three">
-            <div class="vertiv-item-box">
-              <div class="content-box">
-                <a href="./online.html">
-                  <div class="box abs" id='online'>
-                    <img src="./img/page5_boxBg.png" alt="">
+            <div class="vertiv-item swiper-slide two">
+              <div class="vertiv-item-box">
+                <div class="title abs">
+                  <img src="./img/page2_title.png" alt="">
+                </div>
+                <div class="textBox abs">
+                  <div class="textBox-main">
+                    <div class="textBox-title">
+                      <img src="./img/page2_text_title.png" alt="">
+                    </div>
+                    <div class="textBox-cont">
+                      <img src="./img/page2_text_content.png" alt="">
+                    </div>
                   </div>
+                  <div class="button abs">
+                    <img src="./img/button.png" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="vertiv-item swiper-slide three">
+              <div class="chat" v-if="isCheck && !isLogin" @click="showLogin = true">
+                <i class=chat_i></i>
+              </div>
+              <div class="vertiv-item-box">
+                <template v-if="!openOnline">
+                  <div class="content-box">
+                    <div class="online-box abs" id='online'>
+                      <img src="./img/page5_boxBg.png" alt="">
+                    </div>
+                    <div class="box-title abs">
+                      <img src="./img/page5_title.png" alt="">
+                    </div>
+                    <div class="text abs">
+                      即将开放，敬请期待
+                    </div>
+                  </div>
+                  <div class="cir abs">
+                    <img src="./img/page5_cir.png" alt="">
+                  </div>
+                </template>
+                <template v-else>
+                  <div class="vertiv-online noback" v-if="onlineList">
+                    <div class="online-title abs">
+                      <img src="./img/page5_title_1.png" alt="">
+                    </div>
+                    <div class="vertiv-online-main">
+                      <div class="main-item"
+                        :class="{active: activeList['home_'+index].length === onlineList[index].list.length}"
+                        @click="toList(i,index)" v-for="(i,index) in onlineList">
+                        <div class="box">
+                          <div class="img">
+                            <img :src="i.img" alt="">
+                          </div>
+                          <div class="title">
+                            {{i.title}}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </template>
+
+              </div>
+            </div>
+            <div class="vertiv-item swiper-slide four">
+              <div class="vertiv-item-box">
+                <template v-if="openAgenda">
                   <div class="title abs">
-                    <img src="./img/page5_title.png" alt="">
+                    <img src="./img/page3_title.png" alt="">
                   </div>
-                </a>
-              </div>
-              <div class="cir abs">
-                <img src="./img/page5_cir.png" alt="">
+                  <div class="agenda abs">
+                    <div class="agenda-prev button agenda-wrapper-el"></div>
+                    <div class="agenda-next button agenda-wrapper-el"></div>
+                    <div class="swiper-container agenda-wrapper-el" id='agendaSwiper'>
+                      <div class="swiper-wrapper agenda-wrapper">
+                      </div>
+                    </div>
+                    <div class="agenda-list"></div>
+                  </div>
+                </template>
+                <template v-else>
+                  <div class="default abs">
+                    即将开放，敬请期待
+                  </div>
+                </template>
               </div>
             </div>
-          </div>
-          <div class="vertiv-item swiper-slide four">
-            <div class="vertiv-item-box">
-              <div class="title abs">
-                <img src="./img/page3_title.png" alt="">
-              </div>
-              <div class="agenda abs">
-                <div class="agenda-prev button agenda-wrapper-el"></div>
-                <div class="agenda-next button agenda-wrapper-el"></div>
-                <div class="swiper-container agenda-wrapper-el" id='agendaSwiper'>
-                  <div class="swiper-wrapper agenda-wrapper">
+            <div class="vertiv-item swiper-slide five" v-if="openReYery">
+              <div class="vertiv-item-box">
+                <div class="title abs">
+                  <img src="./img/page4_title.png" alt="">
+                </div>
+                <div class="review abs">
+                  <div class="review-prev button abs"></div>
+                  <div class="review-next button abs"></div>
+                  <div class="swiper-container" id='reviewSwiper'>
+                    <div class="swiper-wrapper review-wrapper">
+                      <div class="swiper-slide">
+                        <div class="review-item">
+                          <div class="review-item-img">
+                            <img src="" alt="">
+                          </div>
+                          <div class="review-item-info">
+                            <div class="msg">
+                              维谛技术（Vertiv）上市是一个新的起点，将有助于进一步拓宽融资渠道，实现稳定且长远的发展目标，给客户带来更先进的产品方案和更优质的服务体验，并基于品牌价值和市场影响力的提升，为合作伙伴创造更大的业务拓展空间。
+                            </div>
+                            <div class="name">
+                              --维谛技术（Vertiv）北亚区总裁祝金程
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="review-item">
+                          <div class="review-item-img">
+                            <img src="./img/review/review_02.jpg" alt="">
+                          </div>
+                          <div class="review-item-info">
+                            <div class="msg">
+                              面对未来复杂的市场趋势，维谛技术（Vertiv）将基于各种场景推出全新产品矩阵。同时伴随全新的品牌/营销护航计划，以数字化赋能，帮助合作伙伴实现商机发掘，创造丰富的“能变现的价值”。
+                            </div>
+                            <div class="name">
+                              --维谛技术（Vertiv）中国区市场营销&产品应用副总裁田军
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="review-item">
+                          <div class="review-item-img">
+                            <img src="./img/review/review_03.jpg" alt="">
+                          </div>
+                          <div class="review-item-info">
+                            <div class="msg">
+                              维谛技术（Vertiv）在2020年将重点围绕“新产品市场投放和推广、全方位渠道培训赋能、跨平台销售、销售激励政策、加大授信支持”五个维度全面展开全新的渠道销售策略。
+                            </div>
+                            <div class="name">
+                              --维谛技术（Vertiv）中国区销售副总裁崔益彬
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="review-item">
+                          <div class="review-item-img">
+                            <img src="./img/review/review_04.jpg" alt="">
+                          </div>
+                          <div class="review-item-info">
+                            <div class="msg">
+                              “启于延保合作、商机合作挖掘、维谛技术（Vertiv）主动赋能、项目合作运作、维谛技术（Vertiv）完美交付，是实现双方合作共赢的基础。“合作伙伴的客户优势、维谛技术（Vertiv）的服务优势，将使得双方的合作能进一步做大服务市场的‘蛋糕’。”
+                            </div>
+                            <div class="name">
+                              --维谛技术（Vertiv）中国区服务副总裁丁麒钢
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="review-item">
+                          <div class="review-item-img">
+                            <img src="./img/review/review_05.jpg" alt="">
+                          </div>
+                          <div class="review-item-info">
+                            <div class="msg">
+                              作为维谛技术（Vertiv）的钻石级行业合作伙伴，双方在产品、服务领域的合作中业绩持续增长，并在维谛技术（Vertiv）提供的全面支持下，公司团队的专业能力也得到了持续提升。
+                            </div>
+                            <div class="name">
+                              --北京艾瑞信系统工程技术有限责任公司总经理果小巍
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="review-item">
+                          <div class="review-item-img">
+                            <img src="./img/review/review_06.jpg" alt="">
+                          </div>
+                          <div class="review-item-info">
+                            <div class="msg">
+                              维谛技术（Vertiv）拥有产品、技术、市场、管理四个方面的优势，且产品线齐全，客户认可度高，还拥有全面的支持策略，快速响应速度，专业团队常常下沉一线。通过双方长期合作实现了飞速发展。
+                            </div>
+                            <div class="name">
+                              --北京意科瑞思能源技术有限公司总经理谭捷
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="review-item">
+                          <div class="review-item-img">
+                            <img src="./img/review/review_07.jpg" alt="">
+                          </div>
+                          <div class="review-item-info">
+                            <div class="msg">
+                              小中有大，大有可为。在与维谛技术（Vertiv）的合作中，业务发展方向逐渐转向ITC业务拓展，并取得了不俗的成就。在未来，跟随维谛技术（Vertiv）的步伐，争做ITC分销领跑者。
+                            </div>
+                            <div class="name">
+                              --杭州雷创科技有限公司总经理盛伟
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="agenda-list"></div>
               </div>
             </div>
-          </div>
-          <div class="vertiv-item swiper-slide five">
-            <div class="vertiv-item-box">
-              <div class="title abs">
-                <img src="./img/page4_title.png" alt="">
-              </div>
-              <div class="review abs">
-                <div class="review-prev button abs"></div>
-                <div class="review-next button abs"></div>
-                <div class="swiper-container" id='reviewSwiper'>
-                  <div class="swiper-wrapper review-wrapper">
-                    <div class="swiper-slide">
-                      <div class="review-item">
-                        <div class="review-item-img">
-                          <img src="" alt="">
-                        </div>
-                        <div class="review-item-info">
-                          <div class="msg">
-                            石化行业关键设备和控制系统供电安全
-                          </div>
-                          <div class="name">
-                            ——田军
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="review-item">
-                        <div class="review-item-img">
-                          <img src="" alt="">
-                        </div>
-                        <div class="review-item-info">
-                          <div class="msg">
-                            石化行业关键设备和控制系统供电安全
-                          </div>
-                          <div class="name">
-                            ——田军111
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="review-item">
-                        <div class="review-item-img">
-                          <img src="" alt="">
-                        </div>
-                        <div class="review-item-info">
-                          <div class="msg">
-                            石化行业关键设备和控制系统供电安全
-                          </div>
-                          <div class="name">
-                            ——田军2323
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="review-item">
-                        <div class="review-item-img">
-                          <img src="" alt="">
-                        </div>
-                        <div class="review-item-info">
-                          <div class="msg">
-                            石化行业关键设备和控制系统供电安全
-                          </div>
-                          <div class="name">
-                            ——田军2323
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="review-item">
-                        <div class="review-item-img">
-                          <img src="" alt="">
-                        </div>
-                        <div class="review-item-info">
-                          <div class="msg">
-                            石化行业关键设备和控制系统供电安全
-                          </div>
-                          <div class="name">
-                            ——田军2323
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
 
-          <div class="vertiv-item swiper-slide six">
-            <div class="vertiv-item-box">
-              <div class="title abs">
-                <img src="./img/page6_title.png" alt="">
-              </div>
-              <div class="review abs">
-                <div class="swiper-container" id='reYearSwiper'>
-                  <div class="swiper-wrapper review-wrapper">
-                    <div class="swiper-slide">
-                      <div class="review-item">
-                        <div class="review-item-img">
-                          <img src="" alt="">
-                        </div>
-                        <div class="review-item-title">
-                          sdasdsaddddddxxxxxxxxx
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="review-item">
-                        <div class="review-item-img">
-                          <img src="" alt="">
-                        </div>
-                        <div class="review-item-title">
-                          sdasdsaddddddxxxxxxxxx
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="review-item">
-                        <div class="review-item-img">
-                          <img src="" alt="">
-                        </div>
-                        <div class="review-item-title">
-                          sdasdsaddddddxxxxxxxxx
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="review-item">
-                        <div class="review-item-img">
-                          <img src="" alt="">
-                        </div>
-                        <div class="review-item-title">
-                          sdasdsaddddddxxxxxxxxx
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="review-item">
-                        <div class="review-item-img">
-                          <img src="" alt="">
-                        </div>
-                        <div class="review-item-title">
-                          sdasdsaddddddxxxxxxxxx
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+            <div class="vertiv-item swiper-slide six">
+              <div class="vertiv-item-box">
+                <div class="title abs">
+                  <img src="./img/page6_title.png" alt="">
                 </div>
-                <div class="reYearNav">
-                  <div class="item">
-                    2019
+                <div class="review abs">
+                  <div class="swiper-container" id='reYearSwiper'>
+                    <div class="swiper-wrapper review-wrapper">
+
+                      <div class="swiper-slide">
+                        <div class="review-item">
+                          <div class="review-item-img">
+                            <img src="./img/2019南京.png" alt="">
+                          </div>
+                          <div class="review-item-title">
+                            2019年南京
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="review-item">
+                          <div class="review-item-img">
+                            <img src="./img/2018广州.png" alt="">
+                          </div>
+                          <div class="review-item-title">
+                            2018年广州
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="review-item">
+                          <div class="review-item-img">
+                            <img src="./img/2017昆明.png" alt="">
+                          </div>
+                          <div class="review-item-title">
+                            2017年昆明
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="review-item">
+                          <div class="review-item-img">
+                            <img src="./img/2016三亚.png" alt="">
+                          </div>
+                          <div class="review-item-title">
+                            2016年三亚
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="review-item">
+                          <div class="review-item-img">
+                            <img src="./img/2015深圳.png" alt="">
+                          </div>
+                          <div class="review-item-title">
+                            2015年深圳
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="item active">
-                    2018
-                  </div>
-                  <div class="item">
-                    2017
-                  </div>
-                  <div class="item">
-                    2016
-                  </div>
-                  <div class="item">
-                    2015
+                  <div class="reYearNav">
+                    <div class="item">
+                      2019
+                    </div>
+                    <div class="item active">
+                      2018
+                    </div>
+                    <div class="item">
+                      2017
+                    </div>
+                    <div class="item">
+                      2016
+                    </div>
+                    <div class="item">
+                      2015
+                    </div>
+                    <div class="item more abs">
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <img src="./img/bg.png" alt="" style="visibility: hidden;position: absolute;z-index: -11;left: -10000px;">
       </div>
     </div>
   </div>
 </body>
-<script src="./js/jquery.min.js"></script>
 <script src="./js/swiper.min.js"></script>
-
+<script src="./js/vue.js"></script>
+<script src="./js/online.js"></script>
 <script>
   "use strict";
 
   var agendaList = [{
+    title: '会议登录，暖场视频等',
+    time: '13:00-14:00',
+    name: '',
+    position: '',
+    active: true
+  }, {
     title: '开场视频',
     time: '14:00-14:02',
     name: '',
-    position: ''
+    position: '',
+    active: true
   }, {
     title: '主持人开场',
     time: '14:02-14:05',
     name: '晁晋',
-    position: '维谛技术大中华区行业销售部高级总监'
+    position: '维谛技术中国区行业销售部高级总监',
   }, {
-    title: '《维心聚力·共谛未来》',
+    title: '《维心聚力 共谛未来》',
     time: '14:05-14:15',
     name: '祝金程',
     position: '维谛技术北亚区总裁'
@@ -334,31 +448,33 @@
     title: '《坚守底层规律，加速认知升级&能力迭代》',
     time: '14:15-14:55',
     name: '田军',
-    position: '维谛技术大中华区市场营销&产品应用副总裁'
+    position: ' 维谛技术中国区市场营销与产品应用部副总裁'
   }, {
     title: '荣誉奖颁奖',
     time: '14:55-15:00',
     name: '',
-    position: ''
+    position: '',
+    active: true
   }, {
     title: '《转危为机，紧抓机遇，与子成说，执手共赢》',
     time: '15:00-15:40',
     name: '崔益彬',
-    position: '维谛技术大中华区销售副总裁'
+    position: '维谛技术中国区销售部副总裁'
   }, {
     title: '荣誉奖颁奖',
     time: '15:40-15:45',
     name: '',
-    position: ''
+    position: '',
+    active: true
   }, {
     title: '《以服务粘客户，以合作谋发展》',
     time: '15:45-16:25',
     name: '丁麒钢',
-    position: '维谛技术大中华区服务副总裁 '
+    position: '维谛技术中国区技术服务与软件事业部副总裁'
   }, {
-    title: '待定',
+    title: '《专注 合作 多赢》',
     time: '16:25-16:35',
-    name: '果巍',
+    name: '果小巍',
     position: '北京艾瑞信系统工程技术有限责任公司总经理'
   }, {
     title: '《分销销售：小中有大、大有可为》',
@@ -374,28 +490,36 @@
     title: '荣誉奖颁奖',
     time: '16:55-17:00',
     name: '',
-    position: ''
+    position: '',
+    active: true
   }, {
     title: '现场答疑',
     time: '17:00-17:15',
     name: '',
-    position: ''
+    position: '',
+    active: true
   }, {
     title: '幸运抽奖',
     time: '17:15-17:25',
     name: '',
-    position: ''
+    position: '',
+    active: true
   }];
   $(function () {
     var isClickNext = false
     var winHeight = window.innerHeight;
-    var scale = winHeight / 1080
-    if (winHeight < 800) {
-      $(".vertiv-item-box").css('transform', 'scale(' + scale + ')')
+    var scale = winHeight / 910
+    if (winHeight < 880) {
+      $(".vertiv-item-box").css('transform', 'scale(' + scale + ') ')
     }
-    if(winHeight > 1080) {
-      $('.light-box').css({'transform': 'scale('+scale+')','transform-origin': '100% 100%'})
-      $(".vertiv-item-box").css({'transform': 'scale(' + scale + ')'})
+    if (winHeight > 1080) {
+      $('.light-box').css({
+        'transform': 'scale(' + scale + ') translate(-50% -50%)',
+        'transform-origin': '100% 100%'
+      })
+      $(".vertiv-item-box").css({
+        'transform': 'scale(' + scale + ') '
+      })
     }
 
     $(".vertiv-item").height(winHeight + 'px');
@@ -411,7 +535,12 @@
           slideChange(this.activeIndex);
         },
         init: function init() {
-          slideInit();
+          slideInit(this);
+        },
+        slideChangeTransitionStart: function slideChangeTransitionStart() {
+          if (this.activeIndex !== 2) {
+            $('body').addClass("hideKf").removeClass("showKf")
+          }
         }
       }
     });
@@ -437,17 +566,24 @@
       centerInsufficientSlides: true,
       spaceBetween: -250,
       slidesOffsetBefore: -77,
-      initialSlide: 1,
+      initialSlide: 0,
       nested: true,
+      loop: true,
+      loopAdditionalSlides: true,
       on: {
         slideChangeTransitionEnd: function () {
-          $('.reYearNav').children(".item").eq(this.activeIndex).addClass("active").siblings().removeClass('active')
+          $('.reYearNav').children(".item").eq(this.realIndex).addClass("active").siblings().removeClass(
+            'active')
         }
       }
     });
 
-    $(".reYearNav").on("click",'.item',function () {
-      reYearSwiper.slideTo($(this).index())
+    $(".reYearNav").on("click", '.item', function () {
+      reYearSwiper.slideToLoop($(this).index())
+    })
+
+    $("#toOnline").click(function () {
+      slideChange(2, 'nav');
     })
 
     agendaInit(agendaList);
@@ -459,7 +595,7 @@
 
     function agendaInit(agendaList) {
       var num = 9; // 一页最多显示数量
-      if(winHeight> 1080){
+      if (winHeight > 1080) {
         num = 10
       }
       var $agendaBox = $('.agenda');
@@ -483,7 +619,7 @@
 
         var agendaSwiper = new Swiper('#agendaSwiper', {
           // autoplay: true,
-          width: 616,
+          // width: 616,
           // loop: true, // 循环模式选项
           slidesPerView: 'auto',
           navigation: {
@@ -495,7 +631,7 @@
               $('.agenda-next').removeClass('animate')
             }
           }
-          
+
         });
       } else {
         agendaList.forEach(function (res) {
@@ -508,12 +644,14 @@
     function slideChange(index, type) {
       $(".nav-right").children('div').eq(index).addClass("active").siblings().removeClass("active");
       $('.vertiv-item').eq(index).addClass('animate');
-
+      if (index === 2) {
+        $('body').removeClass("hideKf").addClass("showKf")
+      }
       if (type === 'nav') {
         mySwiper.slideTo(index);
       }
 
-      if(index === 3 && !isClickNext){
+      if (index === 3 && !isClickNext) {
         isClickNext = true
         $('.agenda-next').addClass("animate")
       }
@@ -521,14 +659,32 @@
 
     function agendaItem(obj) {
       return ' <div class="agenda-item"> ' + ' <div class="agenda-item-time"> ' + obj.time + '</div>' +
-        '<div class="agenda-item-info">' + '<div class="agenda-item-info-title">' + obj.title + '</div>' +
+        '<div class="agenda-item-info">' + '<div class="agenda-item-info-title' + (obj.active ? ' active' : '') +
+        '">' + obj.title + '</div>' +
         '<div class="agenda-item-info-person">' + '<div class="name">' + obj.name + '</div>' +
         '<div class="position">' + obj.position + '</div>' + '</div>' + '</div>' + '</div>';
     }
 
-    function slideInit() {
-      $('.one').addClass("animate");
+    function slideInit(that) {
+      $(".nav-right").show()
       $(".mb").hide();
+      if (sessionStorage.toHome) {
+        that.slideTo(sessionStorage.toHome)
+        $('.vertiv-item').eq(sessionStorage.toHome).addClass("animate")
+        sessionStorage.removeItem('toHome')
+      } else {
+        $(".nav-item").eq(0).addClass("active")
+        $('.one').addClass("animate");
+      }
+    }
+
+    if (sessionStorage.toHome) {
+      $('.nav-item').eq(sessionStorage.toHome).addClass("active").siblings().removeClass("active")
+      if (sessionStorage.toHome == 2) {
+        $('body').removeClass("hideKf").addClass("showKf")
+      }
+    } else {
+      $('body').addClass("hideKf").removeClass("showKf")
     }
   });
 </script>

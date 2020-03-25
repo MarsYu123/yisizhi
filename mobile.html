@@ -5,8 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport"
         content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-    <title>移动端</title>
-    <link rel="stylesheet" href="./css/mobile.css">
+    <title>2020Vertiv合作伙伴大会</title>
+    <link href="img/vertiv.png" rel="shortcut icon">
+    <!-- 在线客服依赖以下css和js文件,请按需引入 -->
+    <link rel="stylesheet" type="text/css"
+        href="https://php-api2.issmart.com.cn/fastadmin/public/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://php-api2.issmart.com.cn/fastadmin/public/assets/addons/kefu/css/kefu_default.css">
+    <script type="text/javascript"
+        src="https://php-api2.issmart.com.cn/fastadmin/public/assets/libs/jquery/dist/jquery.min.js">
+    </script>
+    <script type="text/javascript" src="https://php-api2.issmart.com.cn/fastadmin/public/assets/addons/kefu/js/kefu.js">
+    </script>
+    <script type="text/javascript"
+        src="https://php-api2.issmart.com.cn/fastadmin/public/assets/libs/fastadmin-layer/dist/layer.js">
+    </script>
+    <script type="text/javascript"
+        src="https://php-api2.issmart.com.cn/fastadmin/public/assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./css/mobile.css?v=4.5">
     <!-- <link rel="stylesheet" href="./css/style.css"> -->
     <link rel="stylesheet" href="./css/swiper.min.css">
 </head>
@@ -42,199 +58,244 @@
             </div>
         </div>
     </div>
-    <div class="vertiv">
-        <div class="nav">
-            <div class="nav-logo">
-                <img src="./img/logo.png" alt="">
-            </div>
-            <div class="nav-right">
-                <div class="icon" id='icon'></div>
-                <div class="nav-list" id='nav-list'>
-                    <div class="bg"></div>
-                    <div class="nav-list-item">
-                        首页
-                    </div>
-                    <div class="nav-list-item">
-                        大会介绍
-                    </div>
-                    <div class="nav-list-item">
-                        线上展厅
-                    </div>
-                    <div class="nav-list-item">
-                        大会议程
-                    </div>
-                    <div class="nav-list-item">
-                        精彩回顾
-                    </div>
-                    <div class="nav-list-item">
-                        往届回顾
+
+    <div id="app">
+        
+        <publis_login v-if="showLogin" @submit="login" @clear="showLogin = false"></publis_login>
+        <div class="vertiv">
+            <div class="nav">
+                <div class="nav-logo">
+                    <img src="./img/logo.png" alt="">
+                </div>
+                <div class="nav-right">
+                    <div class="icon" id='icon'></div>
+                    <div class="nav-list" id='nav-list'>
+                        <div class="bg"></div>
+                        <div class="nav-list-item">
+                            首页
+                        </div>
+                        <div class="nav-list-item">
+                            大会介绍
+                        </div>
+                        <div class="nav-list-item">
+                            线上展厅
+                        </div>
+                        <div class="nav-list-item">
+                            大会议程
+                        </div>
+                        <div class="nav-list-item" v-if="openReYery">
+                            精彩回顾
+                        </div>
+                        <div class="nav-list-item">
+                            往届回顾
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="swiper-container" id='content'>
-            <div class="swiper-wrapper">
-                <div class="vertiv-item swiper-slide one">
-                    <div class="light">
-                        <img class="light-1 abs" src="./img/mobile/light_1.png" alt="">
-                        <img class="light-2 abs" src="./img/mobile/light_2.png" alt="">
-                        <img class="light-3 abs" src="./img/mobile/light_3.png" alt="">
-                        <img class="light-4 abs" src="./img/mobile/light_4.png" alt="">
-                    </div>
-                    <div class="vertiv-item-cont">
-                        <div class="img-2020 abs">
-                            <img src="./img/mobile/2020_1.png?v=1" alt="">
+            <div class="swiper-container" id='content'>
+                <div class="swiper-wrapper">
+                    <div class="vertiv-item swiper-slide one">
+                        <div class="light">
+                            <img class="light-1 abs" src="./img/mobile/light_1.png" alt="">
+                            <img class="light-2 abs" src="./img/mobile/light_2.png" alt="">
+                            <img class="light-3 abs" src="./img/mobile/light_3.png" alt="">
+                            <img class="light-4 abs" src="./img/mobile/light_4.png" alt="">
                         </div>
-                        <div class="img-title abs">
-                            <img src="./img/mobile/page1_title.png" alt="">
-                        </div>
-                        <div class="img-cont abs">
-                            <img src="./img/mobile/page1_text.png" alt="">
-                        </div>
-                        <div class="img-button abs">
-                            <img src="./img/mobile/page1_button.png" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="vertiv-item swiper-slide two">
-                    <div class="vertiv-item-cont">
-                        <div class="title abs">
-                            <img src="./img/mobile/page2_title.png" alt="">
-                        </div>
-                        <div class="cont abs">
-                            <div class="cont-title cont-img">
-                                <img src="./img/mobile/page2_cont_title.png" alt="">
+                        <div class="vertiv-item-cont">
+                            <div class="img-2020 abs">
+                                <img src="./img/mobile/2020_1.png?v=1" alt="">
                             </div>
-                            <div class="cont-text cont-img">
-                                <img src="./img/mobile/page2_cont_text.png" alt="">
+                            <div class="img-title abs">
+                                <img src="./img/mobile/page1_title.png" alt="">
+                            </div>
+                            <div class="img-cont abs">
+                                <img src="./img/mobile/page1_text.png" alt="">
+                            </div>
+                            <div class="img-button abs">
+                                <div class="play">
+                                    <a @click="toPlay"><img src="./img/play.png" alt=""></a>
+                                    <p>3月26日（周四）13:00开放</p>
+                                </div>
+                                <div class="online" id="toOnline">
+                                    <img src="./img/online.png" alt="">
+                                    <p>3月23日（周一）09:00开放 </p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="vertiv-item swiper-slide three">
-                    <div class="vertiv-item-cont">
-                        <div class="title abs">
-                            <img src="./img/mobile/page3_title.png" alt="">
-                        </div>
-                        <div class="btn-l btn abs">
-                            <img src="./img/mobile/page3_btn_l.png" alt="">
-                        </div>
-                        <a href="./mobile_online.html">
+                    <div class="vertiv-item swiper-slide two">
+                        <div class="vertiv-item-cont">
+                            <div class="title abs">
+                                <img src="./img/mobile/page2_title.png" alt="">
+                            </div>
                             <div class="cont abs">
-                            </div>
-                        </a>
-                        <div class="btn-r btn abs">
-                            <img src="./img/mobile/page3_btn_r.png" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="vertiv-item swiper-slide four">
-                    <div class="vertiv-item-cont">
-                        <div class="title abs">
-                            <img src="./img/mobile/page4_title.png" alt="">
-                        </div>
-                        <div class="agenda-time abs">
-                            3月26日
-                        </div>
-                        <div class="agenda abs">
-                            <div class="agenda-prev button agenda-wrapper-el"></div>
-                            <div class="agenda-next button agenda-wrapper-el"></div>
-                            <div class="swiper-container agenda-wrapper-el" id='agendaSwiper'>
-                                <div class="swiper-wrapper agenda-wrapper">
+                                <div class="cont-title cont-img">
+                                    <img src="./img/mobile/page2_cont_title.png" alt="">
                                 </div>
-                            </div>
-                            <div class="agenda-list"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="vertiv-item swiper-slide five">
-                    <div class="vertiv-item-cont">
-                        <div class="title abs">
-                            <img src="./img/mobile/page5_title.png" alt="">
-                        </div>
-                        <div class="review abs">
-                            <div class="swiper-container" id='reviewSwiper'>
-                                <div class="swiper-wrapper review-wrapper">
+                                <div class="cont-text cont-img">
+                                    <img src="./img/mobile/page2_cont_text.png" alt="">
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="vertiv-item swiper-slide six">
-                    <div class="vertiv-item-cont">
-                        <div class="title abs">
-                            <img src="./img/mobile/page6_title.png" alt="">
+                    <div class="vertiv-item swiper-slide three">
+                        <div class="chat" v-if="!isLogin" @click="showLogin = true">
+                            <i class=chat_i></i>
                         </div>
-                        <div class="review abs">
-                            <div class="swiper-container" id='reYearSwiper'>
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <div class="review-item">
-                                            <div class="review-item-img">
-                                                <!-- <img src="" alt=""> -->
-                                            </div>
-                                            <div class="review-item-title">
-                                                sdasdsaddddddxxxxxxxxx
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="review-item">
-                                            <div class="review-item-img">
-                                                <!-- <img src="" alt=""> -->
-                                            </div>
-                                            <div class="review-item-title">
-                                                sdasdsaddddddxxxxxxxxx
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="review-item">
-                                            <div class="review-item-img">
-                                                <!-- <img src="" alt=""> -->
-                                            </div>
-                                            <div class="review-item-title">
-                                                sdasdsaddddddxxxxxxxxx
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="review-item">
-                                            <div class="review-item-img">
-                                                <!-- <img src="" alt=""> -->
-                                            </div>
-                                            <div class="review-item-title">
-                                                sdasdsaddddddxxxxxxxxx
+                        <div class="vertiv-item-cont">
+                            <div class="title abs">
+                                <img src="./img/mobile/page3_title.png" alt="">
+                            </div>
+                            <template v-if="!openOnline">
+                                <div class="btn-l btn abs">
+                                    <img src="./img/mobile/page3_btn_l.png" alt="">
+                                </div>
+                                <div class="cont abs">
+                                </div>
+                                <div class="text abs">即将开放，敬请期待</div>
+                                <div class="btn-r btn abs">
+                                    <img src="./img/mobile/page3_btn_r.png" alt="">
+                                </div>
+                            </template>
+                            <template v-else>
+                                <div class="vertiv-online onlineHome">
+                                    <div class="vertiv-online-main abs">
+                                        <div class="main-box">
+                                            <div class="main-item"
+                                                :class="{active: activeList['home_'+index].length === onlineList[index].list.length}"
+                                                @click="toList(i,index)" v-for="(i,index) in onlineList">
+                                                <div class="box">
+                                                    <div class="img">
+                                                        <img :src="i.img" alt="">
+                                                    </div>
+                                                    <div class="online-item-title">
+                                                        {{i.title}}
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="swiper-slide">
-                                        <div class="review-item">
-                                            <div class="review-item-img">
-                                                <!-- <img src="" alt=""> -->
-                                            </div>
-                                            <div class="review-item-title">
-                                                sdasdsaddddddxxxxxxxxx
-                                            </div>
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+                    <div class="vertiv-item swiper-slide four">
+                        <div class="vertiv-item-cont">
+                            <div class="title abs">
+                                <img src="./img/mobile/page4_title.png" alt="">
+                            </div>
+                            <template v-if="openAgenda">
+                                <div class="agenda-time abs">
+                                    3月26日
+                                </div>
+                                <div class="agenda abs">
+                                    <div class="agenda-prev button agenda-wrapper-el"></div>
+                                    <div class="agenda-next button agenda-wrapper-el"></div>
+                                    <div class="swiper-container agenda-wrapper-el" id='agendaSwiper'>
+                                        <div class="swiper-wrapper agenda-wrapper">
                                         </div>
+                                    </div>
+                                    <div class="agenda-list"></div>
+                                </div>
+                            </template>
+                            <template v-else>
+                                <div class="default abs">
+                                    即将开放，敬请期待
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+                    <div class="vertiv-item swiper-slide five" v-if="openReYery">
+                        <div class="vertiv-item-cont">
+                            <div class="title abs">
+                                <img src="./img/mobile/page5_title.png" alt="">
+                            </div>
+                            <div class="review abs">
+                                <div class="swiper-container" id='reviewSwiper'>
+                                    <div class="swiper-wrapper review-wrapper">
                                     </div>
                                 </div>
                             </div>
-                            <div class="reYearNav">
-                                <div class="item">
-                                    2019
+                        </div>
+                    </div>
+                    <div class="vertiv-item swiper-slide six">
+                        <div class="vertiv-item-cont">
+                            <div class="title abs">
+                                <img src="./img/mobile/page6_title.png" alt="">
+                            </div>
+                            <div class="review abs">
+                                <div class="swiper-container" id='reYearSwiper'>
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="review-item">
+                                                <div class="review-item-img">
+                                                    <img src="./img/mobile/2019南京.png" alt="">
+                                                </div>
+                                                <div class="review-item-title">
+                                                    2019年南京
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="review-item">
+                                                <div class="review-item-img">
+                                                    <img src="./img/mobile/2018广州.png" alt="">
+                                                </div>
+                                                <div class="review-item-title">
+                                                    2018年广州
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="review-item">
+                                                <div class="review-item-img">
+                                                    <img src="./img/mobile/2017昆明.png" alt="">
+                                                </div>
+                                                <div class="review-item-title">
+                                                    2017年昆明
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="review-item">
+                                                <div class="review-item-img">
+                                                    <img src="./img/mobile/2016三亚.png" alt="">
+                                                </div>
+                                                <div class="review-item-title">
+                                                    2016年三亚
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="review-item">
+                                                <div class="review-item-img">
+                                                    <img src="./img/mobile/2015深圳.png" alt="">
+                                                </div>
+                                                <div class="review-item-title">
+                                                    2015年深圳
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="item active">
-                                    2018
-                                </div>
-                                <div class="item">
-                                    2017
-                                </div>
-                                <div class="item">
-                                    2016
-                                </div>
-                                <div class="item">
-                                    2015
+                                <div class="reYearNav">
+                                    <div class="item">
+                                        2019
+                                    </div>
+                                    <div class="item active">
+                                        2018
+                                    </div>
+                                    <div class="item">
+                                        2017
+                                    </div>
+                                    <div class="item">
+                                        2016
+                                    </div>
+                                    <div class="item">
+                                        2015
+                                    </div>
+                                    <div class="item more abs">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -245,57 +306,68 @@
     </div>
     <img src="./img/mobile/page1_bg.png" alt=""
         style="visibility: hidden;position: absolute;z-index: -11;left: -10000px;">
-    <script src="./js/jquery.min.js"></script>
+    <!-- <script src="./js/jquery.min.js"></script> -->
+    <script src="./js/index.js?v=1.1"></script>
     <script src="./js/swiper.min.js"></script>
+    <script src="./js/vue.min.js"></script>
+    <script src="./js/online.js?v=1.1"></script>
     <script>
         "use strict";
-
         var isload = false;
         var agendaList = [{
+            title: '会议登录，暖场视频等',
+            time: '13:00-14:00',
+            name: '',
+            position: '',
+            active: true
+        }, {
             title: '开场视频',
             time: '14:00-14:02',
             name: '',
-            position: ''
+            position: '',
+            active: true
         }, {
             title: '主持人开场',
             time: '14:02-14:05',
             name: '晁晋',
-            position: 'Vertiv大中华区行业销售部高级总监'
+            position: '维谛技术中国区行业销售部高级总监',
         }, {
-            title: '《维心聚力·共谛未来》',
+            title: '《维心聚力 共谛未来》',
             time: '14:05-14:15',
             name: '祝金程',
-            position: 'Vertiv北亚区总裁'
+            position: '维谛技术北亚区总裁'
         }, {
             title: '《坚守底层规律，加速认知升级&能力迭代》',
             time: '14:15-14:55',
             name: '田军',
-            position: ' Vertiv大中华区市场营销&产品<br>应用副总裁'
+            position: ' 维谛技术中国区市场营销与产品应用部副总裁'
         }, {
             title: '荣誉奖颁奖',
             time: '14:55-15:00',
             name: '',
-            position: ''
+            position: '',
+            active: true
         }, {
-            title: '《转危为机，紧抓机遇，与子成说，<br>执手共赢》',
+            title: '《转危为机，紧抓机遇，与子成说，执手共赢》',
             time: '15:00-15:40',
             name: '崔益彬',
-            position: 'Vertiv大中华区销售副总裁'
+            position: '维谛技术中国区销售部副总裁'
         }, {
             title: '荣誉奖颁奖',
             time: '15:40-15:45',
             name: '',
-            position: ''
+            position: '',
+            active: true
         }, {
             title: '《以服务粘客户，以合作谋发展》',
             time: '15:45-16:25',
             name: '丁麒钢',
-            position: 'Vertiv大中华区服务副总裁 '
+            position: '维谛技术中国区技术服务与软件事业部副总裁'
         }, {
-            title: '待定',
+            title: '《专注 合作 多赢》',
             time: '16:25-16:35',
-            name: '果巍',
-            position: '北京艾瑞信系统工程技术有限<br>责任公司总经理'
+            name: '果小巍',
+            position: '北京艾瑞信系统工程技术有限责任公司总经理'
         }, {
             title: '《分销销售：小中有大、大有可为》',
             time: '16:35-16:45',
@@ -305,22 +377,25 @@
             title: '《整合行业资源 从0到1突破》',
             time: '16:45-16:55',
             name: '谭捷',
-            position: '北京意科瑞思能源技术有限<br>公司总经理'
+            position: '北京意科瑞思能源技术有限公司总经理'
         }, {
             title: '荣誉奖颁奖',
             time: '16:55-17:00',
             name: '',
-            position: ''
+            position: '',
+            active: true
         }, {
             title: '现场答疑',
             time: '17:00-17:15',
             name: '',
-            position: ''
+            position: '',
+            active: true
         }, {
             title: '幸运抽奖',
             time: '17:15-17:25',
             name: '',
-            position: ''
+            position: '',
+            active: true
         }];
         var reviewList = [{
             msg: '石化行业关键设备和控制系统供电安全',
@@ -347,7 +422,8 @@
 
         function agendaItem(obj) {
             return ' <div class="agenda-item"> ' + ' <div class="agenda-item-time"> ' + obj.time + '</div>' +
-                '<div class="agenda-item-info">' + '<div class="agenda-item-info-title">' + obj.title + '</div>' +
+                '<div class="agenda-item-info">' + '<div class="agenda-item-info-title' + (obj.active ? ' active' :
+                    '') + '">' + obj.title + '</div>' +
                 '<div class="agenda-item-info-person">' + '<div class="name">' + obj.name + '</div>' +
                 '<div class="position">' + obj.position + '</div>' + '</div>' + '</div>' + '</div>';
         }
@@ -366,8 +442,24 @@
             return num * 100 * ($(window).width() / 750);
         }
 
+        function smallTr() {
+            if ((winWidth / winHeight) > 0.6) {
+                $('.vertiv-item-cont').css({
+                    "transform": "translateY(-50%) scale(0.9)",
+                    "transform-origin": "center 0"
+                });
+                $('.img-button').css("bottom", ".3rem")
+                $(".vertiv-online-main").css({
+                    "top": "2.8rem"
+                }).addClass('small');
+            }
+        }
+
+        var winHeight = JSON.parse(JSON.stringify(window.innerHeight));
+        var winWidth = window.innerWidth;
+
         $(function () {
-            var winHeight = window.innerHeight;
+            smallTr()
             var mySwiper = new Swiper('#content', {
                 direction: 'vertical',
                 // 垂直切换选项
@@ -375,9 +467,32 @@
                 //开启滚轮
                 height: winHeight,
                 slidesPerView: 'auto',
+                observeParents: true,
+                observer: true,
                 on: {
                     slideChangeTransitionEnd: function slideChangeTransitionEnd() {
                         slideChange(this.activeIndex);
+                    },
+                    init: function init() {
+                        slideInit(this);
+                    },
+                    slideChangeTransitionStart: function slideChangeTransitionStart() {
+                        if (this.activeIndex !== 2) {
+                            $('body').addClass("hideKf").removeClass("showKf")
+                        }
+                    },
+                    resize: function resize() {
+                        if ((winWidth / winHeight) > 0.6) {
+                            $('.vertiv-item-cont').css({
+                                "transform": "translateY(-50%) scale(0.9)",
+                                "transform-origin": "center 0"
+                            });
+                            $('.img-button').css("bottom", ".3rem")
+                            $(".vertiv-online-main").css({
+                                "top": "2.8rem"
+                            }).addClass('small');
+                        }
+                        this.update(true)
                     }
                 }
             });
@@ -389,22 +504,24 @@
                 centerInsufficientSlides: true,
                 spaceBetween: rem2px(-4),
                 slidesOffsetBefore: rem2px(1),
-                initialSlide: 1,
+                initialSlide: 0,
                 nested: true,
+                loop: true,
+                loopAdditionalSlides: 2,
                 on: {
                     slideChangeTransitionEnd: function () {
-                        $('.reYearNav').children(".item").eq(this.activeIndex).addClass("active")
+                        $('.reYearNav').children(".item").eq(this.realIndex).addClass("active")
                             .siblings().removeClass('active')
                     }
                 }
             });
 
             $(".reYearNav").on("click", '.item', function () {
-                reYearSwiper.slideTo($(this).index())
+                reYearSwiper.slideToLoop($(this).index())
             })
-
             var isClickNext = false;
             $(function () {
+
                 $(document).click(function (e) {
                     var e = e || window.event;
                     var elem = e.target || e.srcElement;
@@ -430,10 +547,18 @@
                     $(this).removeClass('animate');
                 });
             });
+
+            $("#toOnline").click(function () {
+                slideChange(2, 'nav');
+            })
             agendaInit(agendaList);
 
             function agendaInit(agendaList) {
                 var num = 9; // 一页最多显示数量
+
+                if (winHeight < 570) {
+                    num = 8
+                }
 
                 var $agendaBox = $('.agenda');
 
@@ -523,12 +648,24 @@
                 if (type === 'nav') {
                     mySwiper.slideTo(index);
                 }
+                if (index === 2) {
+                    $('body').removeClass("hideKf").addClass("showKf")
+                }
 
                 if (index === 3 && !isClickNext) {
                     isClickNext = true;
                     $('.agenda-next').addClass("animate");
                 }
             }
+
+            function slideInit(that) {
+                if (sessionStorage.toHome) {
+                    that.slideTo(sessionStorage.toHome)
+                    $('.vertiv-item').addClass("active")
+                    sessionStorage.removeItem('toHome')
+                }
+            }
+
             loading().then(function (res) {
                 $('.loading').hide();
                 $('.one').addClass("animate");
@@ -561,6 +698,14 @@
             }
 
         });
+        if (sessionStorage.toHome) {
+            $('.nav-item').eq(sessionStorage.toHome).addClass("active").siblings().removeClass("active")
+            if (sessionStorage.toHome == 2) {
+                $('body').removeClass("hideKf").addClass("showKf")
+            }
+        } else {
+            $('body').addClass("hideKf").removeClass("showKf")
+        }
     </script>
 </body>
 

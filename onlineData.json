@@ -1,258 +1,381 @@
 [
     {
         "title": "Power Train",
-        "img": "",
+        "img": "./img/online/page1_item_1.png",
+        "note": "Power Train",
         "list": [{
-                "title": "Vertiv Liebert APM160三合一智能电力模组",
-                "content": "",
-                "img": "",
+                "title": "Vertiv Liebert APM160<br>三合一智能电力模组",
+                "content": "APM160三合一智能电力模组，秉承维谛技术“不妥协的可靠性”理念，助力边缘计算场景。",
+                "img": "./img/product_img/Vertiv Liebert APM160三合一智能电力模组.png",
                 "detail": {
-                    "trait": "输入配电、UPS、输出精密配电一体化智慧融合, 节省系统67%占地和施工工时。<br>全功率链路统一管理，不错过任何关键节点<br>输入、输出布线分区独立，避免交叉走线带来的安全隐患；<br>UPS 功率模块输出采用独创的母排并联技术，系统均流度好，可靠性高；<br>增强型安规防护设计及严苛的湿尘环境测试，提升产品可靠性；",
-                    "scope": "中、小企业数据机房<br>微模块数据中心<br>分布式数据中心",
-                    "tmt": "电信<br>金融<br>政府<br>企业<br>交通<br>教育<br>医疗<br>制造业",
-                    "about": ["https://www.w3school.com.cn/i/movie.ogg", "http://vjs.zencdn.net/v/oceans.mp4"],
+                    "trait": "<i></i>输入配电UPS、输出精密配电一体化智慧融合, 节省系统67%占地和施工工时<br><i></i>全功率链路统一管理，不错过任何关键节点<br><i></i>输入、输出布线分区独立，避免交叉走线带来的安全隐患<br><i></i>UPS 功率模块输出采用独创的母排并联技术，系统均流度好，可靠性高<br><i></i>增强型安规防护设计及严苛的湿尘环境测试，提升产品可靠性",
+                    "scope": "<i></i>中、小企业数据机房<br><i></i>微模块数据中心<br><i></i>分布式数据中心",
+                    "tmt": "<i></i>电信<br><i></i>金融<br><i></i>政府<br><i></i>企业<br><i></i>交通<br><i></i>教育<br><i></i>医疗<br><i></i>制造业",
                     "file": [{
-                        "title": "这是下载文件",
-                        "url": "https://www.baidu.com"
+                        "title": "Vertiv™ Liebert® APM160  三合一智能电力模组 产品彩页.pdf",
+                        "url": "Power Train/APM160/Vertiv™ Liebert® APM160  三合一智能电力模组 产品彩页.pdf"
                     }],
-                    "video": "http://vjs.zencdn.net/v/oceans.mp4"
-                }
+                    "video": "https://331.cdn-vod.huaweicloud.com/asset/b611d4e86cd95bdadd12912070e92d4e/play_video/ac78034dae6547d292d24a89875639b6.m3u8",
+                    "cover": "https://331.cdn-vod.huaweicloud.com/asset/b611d4e86cd95bdadd12912070e92d4e/cover/Cover0.jpg"
+                },
+                "note": "APM160"
             },
             {
-                "title": "Vertiv Liebert APT预制式供配电模组",
-                "content": "",
-                "img": "",
+                "title": "Vertiv Liebert APT<br>预制式供配电模组",
+                "content": "APT 是久负盛名的维谛技术开发的一款预制式供配电模组，能够集成中低压配电系统，变压器，UPS 和 PTMS 智能配电监控管理系统。",
+                "img": "./img/product_img/Vertiv Liebert APT预制式供配电模组.png",
                 "detail": {
-                    "trait": "快速部署  <br>系统内采用全铜排连接，简化现场电缆工程，实现数据中心电源系统快速部署<br>系统内二次连接线在工厂内预制，实现数据中心智能化系统快速部署<br>在数据中心全生命周期内只对口一个设备商，沟通效率高<br>可靠性高<br>内置PTMS功率链智能管理系统，集中统一监控管理，实时掌握系统运行状况<br>从电气系统，生产制造及现场施工多维度进行系统优化，简化结构，采用铜排替代电缆连接，提升系统可靠性<br>外形美观<br>系统采用统一外观造型设计，更具观赏性<br>节约占地<br>设计更紧凑，节约占地30%，优化数据中心平面布局 <br>配置灵活<br>依据数据中心建设要求不同，兼容工频，高频及模块化UPS<br>可根据实际需求，量身定制UPS输出系统",
-                    "scope": "企业中大型数据机房 <br>中大型IDC中心<br>通信网管中心<br>生产线",
-                    "tmt": "数据中心<br>电信<br>金融中心<br>半导体<br>工业设施<br>电力系统"
-                }
+                    "trait": "快速部署  <br><i></i>系统内采用全铜排连接，简化现场电缆工程，实现数据中心电源系统快速部署<br><i></i>系统内二次连接线在工厂内预制，实现数据中心智能化系统快速部署<br><i></i>在数据中心全生命周期内只对口一个设备商，沟通效率高<br>可靠性高<br><i></i>内置PTMS功率链智能管理系统，集中统一监控管理，实时掌握系统运行状况<br><i></i>从电气系统，生产制造及现场施工多维度进行系统优化，简化结构，采用铜排替代电缆连接，提升系统可靠性<br>外形美观<br><i></i>系统采用统一外观造型设计，更具观赏性<br>节约占地<br><i></i>设计更紧凑，节约占地30%，优化数据中心平面布局 <br>配置灵活<br><i></i>依据数据中心建设要求不同，兼容工频，高频及模块化UPS<br><i></i>可根据实际需求，量身定制UPS输出系统",
+                    "scope": "<i></i>企业中大型数据机房 <br><i></i>中大型IDC中心<br><i></i>通信网管中心<br><i></i>生产线",
+                    "tmt": "<i></i>数据中心<br><i></i>电信<br><i></i>金融中心<br><i></i>半导体<br><i></i>工业设施<br><i></i>电力系统",
+                    "file": [{
+                        "title": "Vertiv Liebert APT 供配电功率链系统 产品彩页.pdf",
+                        "url": "Power Train/APT/Vertiv Liebert APT 供配电功率链系统 产品彩页.pdf"
+                    }],
+                    "video": "https://331.cdn-vod.huaweicloud.com/asset/a22d15fc6771c367f22ce1a4d2d7f296/play_video/4315d46cb92ebc05955eaf7f5931184c.m3u8",
+                    "cover": "https://331.cdn-vod.huaweicloud.com/asset/a22d15fc6771c367f22ce1a4d2d7f296/cover/Cover0.jpg"
+                },
+                "note": "APT"
             },
             {
-                "title": "Vertiv Liebert EXL S1 300-1200kVA增强型高频大功率一体化UPS",
-                "content": "",
-                "img": "",
+                "title": "Vertiv Liebert EXL S1 300-1200kVA<br>增强型高频大功率一体化UPS",
+                "content": "可靠性与可维护性完美融合，Liebert EXL  MW级UPS供配电系统最佳解决方案！",
+                "img": "./img/product_img/Vertiv Liebert EXL 1200kVA增强型高频大功率一体化UPS.png",
                 "detail": {
-                    "trait": "创新的内部架构设计，实现更高系统可靠性<br>热风道隔离设计，关键元件得到更好的物理及电磁防护<br>输出功率因数最高可达 1，带载能力大幅增强<br>超前及滞后全负载范围内，提供 100%容量输出，无需降额<br>卓越的运行效率，双变换模式高达 97%<br>动态在线模式效率高达 99%<br>智能并机提升低负载率下的运行效率<br>无中线设计 (电池/主路输入),节省系统投资<br>支持8台UPS直接并机，提供最大至9.6MVA 系统容量<br>创新的分功能区组合化结构设计实现所有部件快速拆装，大大缩短系统维护时间<br>三相可互换的通用模组设计，提升系统维修效率<br>占地面积小，提升机房空间利用率",
-                    "scope": "互联网IDC<br>云数据中心<br>总部级数据中心<br>轻工业生产",
-                    "tmt": "电信<br>互联网<br>金融<br>政府<br>制造<br>交通"
-                }
+                    "trait": "<i></i>创新的内部架构设计，实现更高系统可靠性<br><i></i>热风道隔离设计，关键元件得到更好的物理及电磁防护<br><i></i>输出功率因数最高可达 1，带载能力大幅增强<br><i></i>超前及滞后全负载范围内，提供 100%容量输出，无需降额<br><i></i>卓越的运行效率，双变换模式高达 97%<br><i></i>动态在线模式效率高达 99%<br><i></i>智能并机提升低负载率下的运行效率<br><i></i>无中线设计 (电池/主路输入),节省系统投资<br><i></i>支持8台UPS直接并机，提供最大至9.6MVA 系统容量<br><i></i>创新的分功能区组合化结构设计实现所有部件快速拆装，大大缩短系统维护时间<br><i></i>三相可互换的通用模组设计，提升系统维修效率<br><i></i>占地面积小，提升机房空间利用率",
+                    "scope": "<i></i>互联网IDC<br><i></i>云数据中心<br><i></i>总部级数据中心<br><i></i>轻工业生产",
+                    "tmt": "<i></i>电信<br><i></i>互联网<br><i></i>金融<br><i></i>政府<br><i></i>制造<br><i></i>交通",
+                    "file": [{
+                        "title": "Vertiv Liebert EXL S1 300 至 1200 kVA更可靠、更节能、更灵活大功率UPS解决方案.pdf",
+                        "url": "Power Train/EXL/Vertiv Liebert EXL S1 300 至 1200 kVA更可靠、更节能、更灵活大功率UPS解决方案.pdf"
+                    }],
+                    "video": "https://331.cdn-vod.huaweicloud.com/asset/921f4f57e0acfb81fa2a41112f25c689/play_video/939645d15552fd570b0578d29eeeff2e.m3u8",
+                    "cover": "https://331.cdn-vod.huaweicloud.com/asset/921f4f57e0acfb81fa2a41112f25c689/cover/Cover0.jpg"
+                },
+                "note": "EXL S1"
             }
         ]
     },
     {
         "title": "全时自然冷",
         "img": "./img/online/page1_item_2.png",
+        "note": "全时自然冷",
         "list": [{
-                "title": "Vertiv Liebert CRV4S全变频自然冷却列间精密空调",
-                "content": "",
-                "img": "",
+                "title": "Vertiv Liebert CRV4S<br>全变频自然冷却列间精密空调",
+                "content": "融合全系统变频，采用全时然冷技术，专门解决局部热点及高热密度机架的全时自然冷技术列间空调解决方案。",
+                "img": "./img/product_img/Vertiv Liebert CRV4S全变频自然冷却列间精密空调.png",
                 "detail": {
-                    "trait": "业内最大制冷量，最高EER/AEER，全变频设计<br>高度集成节能模块，与室外机一体，节省20%占地<br>20%~100% 制冷量快速输出变化<br>超高能效，超低PUE，最低可实现PUE=1.1<br>实现100% 显热比送风，无潜冷损耗<br>随着负载的变化动态输出，风机节省功耗达到30%<br>采用VCC 集中式冷凝器，室外占地面积减少50% 以上<br>恒温恒湿功能，配合先进的温湿度独立控",
-                    "scope": "模块化数据中心<br>边缘计算中心/ 节点<br>各类中、大型数据中心",
-                    "tmt": "金融<br>教育<br>医疗<br>电信<br>交通<br>政府<br>互联网等"
-                }
+                    "trait": "<i></i>业内最大制冷量，最高EER/AEER，全变频设计<br><i></i>高度集成节能模块，与室外机一体，节省20%占地<br><i></i>20%~100% 制冷量快速输出变化<br><i></i>超高能效，超低PUE，最低可实现PUE=1.1<br><i></i>实现100% 显热比送风，无潜冷损耗<br><i></i>随着负载的变化动态输出，风机节省功耗达到30%<br><i></i>采用VCC 集中式冷凝器，室外占地面积减少50% 以上<br><i></i>恒温恒湿功能，配合先进的温湿度独立控",
+                    "scope": "<i></i>模块化数据中心<br><i></i>边缘计算中心/ 节点<br><i></i>各类中、大型数据中心",
+                    "tmt": "<i></i>金融<br><i></i>教育<br><i></i>医疗<br><i></i>电信<br><i></i>交通<br><i></i>政府<br><i></i>互联网等",
+                    "file": [{
+                        "title": "Vertiv Liebert CRV4S全时自然冷列间空调 产品彩页.pdf",
+                        "url": "全时自然冷/CRV4S/Vertiv Liebert CRV4S全时自然冷列间空调 产品彩页.pdf"
+                    }],
+                    "video":"https://331.cdn-vod.huaweicloud.com/asset/b1551bc2e6013b38bb87303766edce86/play_video/0111d56e6a0d1b35a23df4956862d003.m3u8",
+                    "cover": "https://331.cdn-vod.huaweicloud.com/asset/b1551bc2e6013b38bb87303766edce86/cover/Cover0.jpg"
+                },
+                "note": "CRV4S"
             },
             {
-                "title": "Vertiv Liebert DSE 氟泵一体化自然冷却精密空调",
-                "content": "",
-                "img": "",
+                "title": "Vertiv Liebert DSE <br>氟泵一体化自然冷却精密空调",
+                "content": "Liebert DSE是一款全球领先的，专为数据中心打造的大型氟泵一体化自然冷却精密空调。",
+                "img": "./img/product_img/Vertiv Liebert DSE 氟泵一体化自然冷却精密空调.png",
                 "detail": {
-                    "trait": "•利用制冷剂泵循环和100%DX制冷实现高可靠性，和最优全年能效<br>不引入外部空气，无污染,对环境温度无要求<br>采用Liebert  Pump Refrigerant Economizer<br>一体式机组安装，室外安装，不占机房空间<br>无水应用，不耗水、不需要水处理<br>全自动，快速切换节能模式<br>运营成本低，维护成本低<br>年度pPUE=1.1~1.2",
-                    "scope": "模块化数据中心<br>各类中、大型数据中心",
-                    "tmt": "金融<br>电信<br>交通<br>政府<br>互联网等"
-                }
+                    "info": "Liebert DSE是一款全球领先的，专为数据中心打造的大型氟泵一体化自然冷却精密空调。<br>DSE采用了VERTIV空调核心技术，全时自然冷技术。系统采用全时自然冷技术，无需耗水，pPUE可低至1.08。创新节地的结构模式，蒸发系统与冷凝系统合二为一置于室外。设备可置于屋面，减少机房占地面积，为客户业务机柜释放空间，增加业务可利用面积。DSE以其杰出的性能和可靠性，越来越受到客户的青睐，是数据中心无水、可靠、极致节能的智慧之选。",
+                    "trait": "<i></i>利用制冷剂泵循环和100%DX制冷实现高可靠性，和最优全年能效<br><i></i>不引入外部空气，无污染,对环境温度无要求<br><i></i>采用Liebert  Pump Refrigerant Economizer<br><i></i>一体式机组安装，室外安装，不占机房空间<br><i></i>无水应用，不耗水、不需要水处理<br><i></i>全自动，快速切换节能模式<br><i></i>运营成本低，维护成本低<br><i></i>年度pPUE=1.1~1.2",
+                    "scope": "<i></i>模块化数据中心<br><i></i>各类中、大型数据中心",
+                    "tmt": "<i></i>金融<br><i></i>电信<br><i></i>交通<br><i></i>政府<br><i></i>互联网等",
+                    "video": "https://331.cdn-vod.huaweicloud.com/asset/02ff9d9b633bdf23765efda71cfb28bc/play_video/053b350cfb0440a6bc706713e801dc9d.m3u8",
+                    "cover": "https://331.cdn-vod.huaweicloud.com/asset/02ff9d9b633bdf23765efda71cfb28bc/cover/Cover0.jpg"
+                },
+                "note": "DSE"
             },
             {
-                "title": "Vertiv Liebert PEX4S全变频自然冷却精密空调",
-                "content": "",
-                "img": "",
+                "title": "Vertiv Liebert PEX4S<br>全变频自然冷却精密空调",
+                "content": "PEX4S提供业界领先的热管理解决方案，包括效率，保护和对未来业务的洞察力。创新设计无水理念使其比传统解决方案效率高出 50％。凭借无与伦比的专业设计，可使您的数据中心更佳动态灵活。",
+                "img": "./img/product_img/Vertiv Liebert PEX4S全变频自然冷却精密空调.png",
                 "detail": {
-                    "trait": "业内最高EER/AEER，全变频设计，最高全年综合能效可达19<br>高度集成节能模块，与室外机一体，节省20%占地<br>EC风机随负载动态变化，风机节省功耗达到30%<br>采用VCC集中式冷凝器，室外占地面积减少70% <br>配合先进的独立的湿膜加湿系统，降低能耗<br>全时自然冷，最低可实现PUE=1.05<br>20%~100% 制冷量快速输出变化<br>9寸超大触摸屏、R410A制冷剂<br>实现100% 显热比送风<br>安装方便维护简易<br>易分期投入",
-                    "scope": "模块化数据中心<br>边缘计算中心/ 节点<br>各类中、大型数据中心",
-                    "tmt": "金融<br>教育<br>医疗<br>电信<br>交通<br>政府<br>互联网等"
-                }
+                    "trait": "<i></i>业内最高EER/AEER，全变频设计，最高全年综合能效可达19<br><i></i>高度集成节能模块，与室外机一体，节省20%占地<br><i></i>EC风机随负载动态变化，风机节省功耗达到30%<br><i></i>采用VCC集中式冷凝器，室外占地面积减少70% <br><i></i>配合先进的独立的湿膜加湿系统，降低能耗<br><i></i>全时自然冷，最低可实现PUE=1.05<br><i></i>20%~100% 制冷量快速输出变化<br><i></i>9寸超大触摸屏、R410A制冷剂<br><i></i>实现100% 显热比送风<br><i></i>安装方便维护简易<br><i></i>易分期投入",
+                    "scope": "<i></i>模块化数据中心<br><i></i>边缘计算中心/ 节点<br><i></i>各类中、大型数据中心",
+                    "tmt": "<i></i>金融<br><i></i>教育<br><i></i>医疗<br><i></i>电信<br><i></i>交通<br><i></i>政府<br><i></i>互联网等",
+                    "file": [{
+                        "title": "VertivLiebertPEX4S无水极致自然冷精密空调产品彩页.pdf",
+                        "url": "全时自然冷/PEX4S/VertivLiebertPEX4S无水极致自然冷精密空调产品彩页.pdf"
+                    }],
+                    "video": "https://331.cdn-vod.huaweicloud.com/asset/c0d917cb85774c46d5255997cee944c6/play_video/7ee82bd9354a8c3ef324952ff361a6f5.m3u8",
+                    "cover": "https://331.cdn-vod.huaweicloud.com/asset/c0d917cb85774c46d5255997cee944c6/cover/Cover0.jpg"
+                },
+                "note": "PEX4S"
             }
         ]
     },
     {
         "title": "智慧边缘",
         "img": "./img/online/page1_item_3.png",
+        "note": "智慧边缘",
         "list": [{
                 "title": "Vertiv ITA2中功率机架式 UPS",
-                "content": "",
-                "img": "",
+                "content": "边缘计算带来了中小数据中心需求的持续持长，为了更好适应远边缘场景对于 UPS 电源可靠性、能效、投资成本、灵活部署和空间适应性提出的更高要求。维谛技术创新推出 Liebert® ITA2 系列 30kVA 新一代中功率机架式 UPS，引领 19 英寸机柜嵌入式解决方案。",
+                "img": "./img/product_img/Vertiv ITA2中功率机架式 UPS.png",
                 "detail": {
-                    "scope": "中、小企业数据机房<br>网点机柜",
-                    "trait": "双变换效率高达96.5%<br>超高功率密度，整机3U<br>输出功率因数为1，更强的输出带载能力<br>内置并机和LBS双总线功能，满足客户现场对于供电容量和可用性等级的多样化需求<br>兼容塔式/机架式安装方式<br>全面的监控组网能力，实现平滑接入集中统一的远程监控运维平台",
-                    "tmt": "电信<br>金融<br>政府<br>企业<br>交通<br>教育<br>医疗<br>制造业"
-                }
-
+                    "scope": "<i></i>中、小企业数据机房<br><i></i>网点机柜",
+                    "trait": "<i></i>双变换效率高达96.5%<br><i></i>超高功率密度，整机3U<br><i></i>输出功率因数为1，更强的输出带载能力<br><i></i>内置并机和LBS双总线功能，满足客户现场对于供电容量和可用性等级的多样化需求<br><i></i>兼容塔式/机架式安装方式<br><i></i>全面的监控组网能力，实现平滑接入集中统一的远程监控运维平台",
+                    "tmt": "<i></i>电信<br><i></i>金融<br><i></i>政府<br><i></i>企业<br><i></i>交通<br><i></i>教育<br><i></i>医疗<br><i></i>制造业",
+                    "file": [{
+                        "title": "Vertiv™ Liebert® ITA2 系列 30kVA UPS 产品彩页.pdf",
+                        "url": "智慧边缘/ITA2/Vertiv™ Liebert® ITA2 系列 30kVA UPS 产品彩页.pdf"
+                    }],
+                    "video": "https://331.cdn-vod.huaweicloud.com/asset/23334eceb890fbb67603a1b308987c63/play_video/675bff54aece254d4386c24431585844.m3u8",
+                    "cover": "https://331.cdn-vod.huaweicloud.com/asset/23334eceb890fbb67603a1b308987c63/cover/Cover0.jpg"
+                },
+                "note": "ITA2"
             },
             {
-                "title": "Vertiv ITA2中功率机架式 UPS",
-                "content": "",
-                "img": "",
+                "title": "Vertiv SmartCabinet 2-E",
+                "content": "一柜顶多柜的SC2-P、支持ECO模式的SC2-E、外观紧凑性价比更高的SC2-I、挂墙安装小巧精致的SC2-W等全新机型现已加入SmartCabinet豪华套餐，总有一款适合您。",
+                "img": "./img/product_img/123123.png",
                 "detail": {
-                    "trait": "双变换效率高达96.5%<br>超高功率密度，整机3U<br>输出功率因数为1，更强的输出带载能力<br>内置并机和LBS双总线功能，满足客户现场对于供电容量和可用性等级的多样化需求<br>兼容塔式/机架式安装方式<br>全面的监控组网能力，实现平滑接入集中统一的远程监控运维平台",
-                    "scope": "中、小企业数据机房<br>网点机柜",
-                    "tmt": "电信<br>金融<br>政府<br>企业<br>交通<br>教育<br>医疗<br>制造业"
-                }
+                    "trait": "<i></i>真·一体机，IT U位相比前代提升26%<br><i></i>具备ECO模式，合理利用外部冷源，静音节能<br><i></i>双层隔热玻璃门，杜绝凝露现象<br><i></i>可选前后钣金门，适配工业环境<br><i></i>标配智能三色灯，系统状态一目了然<br><i></i>不间断供电+不间断制冷，业务持续无短板<br><i></i>可选锂电，100%空间=300%续航<br><i></i>标配智能PDU，IT用电更透明，更安心<br><i></i>可选智能门锁，系统安防更有保障",
+                    "scope": "<i></i>人员办公场所<br><i></i>网络接入间<br><i></i>边缘计算节点<br><i></i>轻粉尘工业环境<br><i></i>无独立机房的其它场所",
+                    "tmt": "<i></i>物流<br><i></i>金融<br><i></i>政府<br><i></i>教育<br><i></i>医疗<br><i></i>地产<br><i></i>交通<br><i></i>制造<br><i></i>能源<br><i></i>冶金",
+                    "video": "https://331.cdn-vod.huaweicloud.com/asset/e28926e391330b490db603850506132d/play_video/1a84b10dc5024c6d501355ac8ee9311a.m3u8",
+                    "cover": "https://331.cdn-vod.huaweicloud.com/asset/e28926e391330b490db603850506132d/cover/Cover0.jpg",
+                    "file": [{
+                        "url": "智慧边缘/VertivSmartCabinet2机柜式微模块产品彩页.pdf",
+                        "title": "VertivSmartCabinet2机柜式微模块产品彩页.pdf"
+                    }]
+                },
+                "note": "SC2-E"
             },
             {
                 "title": "Vertiv SmartCabinet 2-W",
-                "content": "",
-                "img": "",
+                "content": "一柜顶多柜的SC2-P、支持ECO模式的SC2-E、外观紧凑性价比更高的SC2-I、挂墙安装小巧精致的SC2-W等全新机型现已加入SmartCabinet豪华套餐，总有一款适合您。",
+                "img": "./img/product_img/SmartCabinet2-W.png",
                 "detail": {
-                    "trait": "超薄挂墙安装，至省空间<br>“翻页”式设备支架<br>支持一拖多组合<br>UPS预装<br>风扇散热<br>IP5X级防护<br>可选防尘组件",
-                    "scope": "人员办公场所<br>网络接入间<br>边缘计算节点<br>无独立机房的其它场所",
-                    "tmt": "物流<br>金融<br>政府<br>教育<br>医疗<br>地产<br>交通<br>制造<br>能源<br>冶金"
-                }
+                    "trait": "<i></i>超薄挂墙安装，至省空间<br><i></i>“翻页”式设备支架<br><i></i>支持一拖多组合<br><i></i>UPS预装<br><i></i>风扇散热<br><i></i>IP5X级防护<br><i></i>可选防尘组件",
+                    "scope": "<i></i>人员办公场所<br><i></i>网络接入间<br><i></i>边缘计算节点<br><i></i>无独立机房的其它场所",
+                    "tmt": "<i></i>物流<br><i></i>金融<br><i></i>政府<br><i></i>教育<br><i></i>医疗<br><i></i>地产<br><i></i>交通<br><i></i>制造<br><i></i>能源<br><i></i>冶金",
+                    "file": [{
+                        "url": "智慧边缘/VertivSmartCabinet2机柜式微模块产品彩页.pdf",
+                        "title": "VertivSmartCabinet2机柜式微模块产品彩页.pdf"
+                    }],
+                    "video": "https://331.cdn-vod.huaweicloud.com/asset/faa102e260cc122b603c4c603d0fa55b/play_video/2261350d5fc54dc185b7ce195ecf7fef.m3u8",
+                    "cover": "https://331.cdn-vod.huaweicloud.com/asset/faa102e260cc122b603c4c603d0fa55b/cover/Cover0.jpg"
+                },
+                "note": "SC2-W"
             },
             {
                 "title": "Vertiv SmartRow HPC",
-                "content": "",
-                "img": "",
+                "content": "高性能计算（High Performance Computing，HPC）是通过并行计算提高运算速度，用以解决大规模科学计算和海量并发数据的处理问题，目前在教育科研、生命科学、汽车制造、深度学习及人工智能等各领域有着广泛的需求和应用。",
+                "img": "./img/product_img/Vertiv SmartRow HPC.jpg",
                 "detail": {
-                    "trait": "真正全模块化设计，UPS，配电，制冷，机柜均可模块化横向扩展<br>全封闭结构，对环境不产生热辐射影响<br>专为HPC设计的模块化数据中心解决方案，卓越实现高密度应用<br>交付时间和同等规模MDC相比减少50%<br>前部三色氛围灯，系统状态一目了然；后部智能照明，门开灯亮，门关灯灭<br>系统消防联动，收到消防告警信号后，延时弹开机柜前后门<br>移动运维，随时随地，摒弃焦虑，省心省事",
+                    "trait": "<i></i>真正全模块化设计，UPS，配电，制冷，机柜均可模块化横向扩展<br><i></i>全封闭结构，对环境不产生热辐射影响<br><i></i>专为HPC设计的模块化数据中心解决方案，卓越实现高密度应用<br><i></i>交付时间和同等规模MDC相比减少50%<br><i></i>前部三色氛围灯，系统状态一目了然；后部智能照明，门开灯亮，门关灯灭<br><i></i>系统消防联动，收到消防告警信号后，延时弹开机柜前后门<br><i></i>移动运维，随时随地，摒弃焦虑，省心省事",
                     "scope": "教育科研（大学，研究机构，实验室）、生命科学、高级制造设计和工程计算、人工智能、金融科技、无人驾驶、气象仿真、石油石化、体外诊断等",
-                    "tmt": "教育<br>医疗 <br>能源<br>化工<br>金融<br>交通<br>气象<br>制造"
-                }
+                    "tmt": "<i></i>教育<br><i></i>医疗 <br><i></i>能源<br><i></i>化工<br><i></i>金融<br><i></i>交通<br><i></i>气象<br><i></i>制造",
+                    "file": [{
+                        "title": "Vertiv SmartRow™ HPC 专为HPCAI 设计的单排高密度全封闭微模块 产品彩页.pdf",
+                        "url": "智慧边缘/HPC/Vertiv SmartRow™ HPC 专为HPCAI 设计的单排高密度全封闭微模块 产品彩页.pdf"
+                    }],
+                    "video": "https://331.cdn-vod.huaweicloud.com/asset/22c0d80a392e60329b4b17caf5ba18a0/play_video/8bf6985a5cc83f6f89c97ce174995e08.m3u8",
+                    "cover": "https://331.cdn-vod.huaweicloud.com/asset/22c0d80a392e60329b4b17caf5ba18a0/cover/Cover0.jpg"
+                },
+                "note": "HPC"
             },
             {
-                "title": "Vertiv Liebert DataMate3000-2系列小型机房专用空调",
-                "content": "",
-                "img": "",
+                "title": "Vertiv Liebert DataMate<br>3000-2系列小型机房专用空调",
+                "content": "Vertiv™ Liebert® DataMate3000-2系列22/27kW机房专用空调具有大风量、小焓差设计，适合机房主设备散热特点，可为中小型计算机机房、电源室、精密控制室等场所提供连续、稳定的温湿度环境。机组具有高效节能、稳定、长寿命等运行特点，可满足IT、电力、通信、交通、金融等不同行业的精密环境调节需求。",
+                "img": "./img/product_img/Vertiv Liebert DataMate3000-2系列小型机房专用空调.png",
                 "detail": {
-                    "trait": "冷量范围：5kw～27kw<br>节能：大风量、小焓差设计，适合机房主设备散热特点，为主设备提供连续、稳定的温湿度环境<br>易使用：按照每年365天，每天24小时连续运行长寿命设计，高稳定性，低维护量<br>易维护：能稳定的恒温恒湿功能，全中文大屏幕显示，具有多级密码保护、专家故障诊断功能<br>适应力强：超宽输入电压范围，多种电源保护功能；极强的环境适应能力：低温冷凝器可满足-34°C~+45°C的室外温度环境，确保北方地区冬季机房制冷需求",
-                    "scope": "中小型计算机房<br>设备间、动力间<br>户外电子、通讯设备间<br>变电站、变电所<br>实验室、检测室、存储间",
-                    "tmt": "电信<br>金融<br>政府"
-                }
+                    "trait": "<i></i>冷量范围：5kw～27kw<br><i></i>节能：大风量、小焓差设计，适合机房主设备散热特点，为主设备提供连续、稳定的温湿度环境<br><i></i>易使用：按照每年365天，每天24小时连续运行长寿命设计，高稳定性，低维护量<br><i></i>易维护：能稳定的恒温恒湿功能，全中文大屏幕显示，具有多级密码保护、专家故障诊断功能<br><i></i>适应力强：超宽输入电压范围，多种电源保护功能；极强的环境适应能力：低温冷凝器可满足-34°C~+45°C的室外温度环境，确保北方地区冬季机房制冷需求",
+                    "scope": "<i></i>中小型计算机房<br><i></i>设备间、动力间<br><i></i>户外电子、通讯设备间<br><i></i>变电站、变电所<br><i></i>实验室、检测室、存储间",
+                    "tmt": "<i></i>电信<br><i></i>金融<br><i></i>政府",
+                    "file": [{
+                        "title": "Vertiv Liebert DataMate3000-2系列22 27kW机房专用空调 产品彩页.pdf",
+                        "url": "智慧边缘/DME2/Vertiv Liebert DataMate3000-2系列22 27kW机房专用空调 产品彩页.pdf"
+                    }],
+                    "video": "https://331.cdn-vod.huaweicloud.com/asset/3117b1a93667bbeda1a6e5e7cbabb022/play_video/7efd55bdc2c625c6829289ee805e4f92.m3u8",
+                    "cover": "https://331.cdn-vod.huaweicloud.com/asset/3117b1a93667bbeda1a6e5e7cbabb022/cover/Cover0.jpg"
+                },
+                "note": "DM3000-2系列"
             }
         ]
     },
     {
         "title": "智能制造",
         "img": "./img/online/page1_item_4.png",
+        "note": "智能制造",
         "list": [{
-                "title": "Vertiv Liebert EPK2.0低压成套开关柜",
-                "content": "",
-                "img": "",
+                "title": "Vertiv Liebert EPK2.0<br>低压成套开关柜",
+                "content": "EPK系列低压配电柜源自维谛技术(Vertiv)业内领先的低压配电产品应用技术，适用于6300A及以下交流低压配电系统，可用作受电、馈电、母联、照明，以及动力负荷控制，并且可根据用户需求灵活选择固定式，抽屉式，以及固定分隔式方案。",
+                "img": "./img/product_img/Vertiv Liebert EPK2.0低压成套开关柜.png",
                 "detail": {
-                    "trait": "安装密度高<br>标准高度150mm，300mm<br>具有1/4单元，1/2单元，1单元及2单元<br>单柜最高支持48个回路供电<br>可靠性高<br>标准多功能板设计，简化结构，可靠性高<br>各功能单元之间工作独立，完全分隔<br>馈电单元型式（固定分隔式，抽屉式）、柜体尺寸可根据需要灵活非标定制<br>在线维护<br>模数化馈电单元，热插拔维护<br>专利性的可选在线旁路维护单元，保证关键负荷连续供电<br>专利性的辅助回路在线式维护，保障关键负荷连续供电<br>不同高度单元抽屉的更换实现快速经济扩容<br>人性化的机械连杆设计更利于抽屉单元的操作维护<br>智能管理<br>智能化集中电气参数监控和通讯功能<br>外形美观<br>新工业造型设计，外形更美观",
-                    "scope": "中大型企业数据中心<br>大楼基建配电<br>工业设备配电",
-                    "tmt": "中大型企业数据中心<br>大楼基建配电<br>工业设备配电"
-                }
+                    "trait": "安装密度高<br><i></i>标准高度150mm，300mm<br><i></i>具有1/4单元，1/2单元，1单元及2单元<br><i></i>单柜最高支持48个回路供电<br>可靠性高<br><i></i>标准多功能板设计，简化结构，可靠性高<br><i></i>各功能单元之间工作独立，完全分隔<br><i></i>馈电单元型式（固定分隔式，抽屉式）、柜体尺寸可根据需要灵活非标定制<br>在线维护<br><i></i>模数化馈电单元，热插拔维护<br><i></i>专利性的可选在线旁路维护单元，保证关键负荷连续供电<br><i></i>专利性的辅助回路在线式维护，保障关键负荷连续供电<br><i></i>不同高度单元抽屉的更换实现快速经济扩容<br><i></i>人性化的机械连杆设计更利于抽屉单元的操作维护<br>智能管理<br><i></i>智能化集中电气参数监控和通讯功能<br>外形美观<br><i></i>新工业造型设计，外形更美观",
+                    "scope": "<i></i>中大型企业数据中心<br><i></i>大楼基建配电<br><i></i>工业设备配电",
+                    "tmt": "<i></i>数据中心<br><i></i>电信<br><i></i>石油石化<br><i></i>电力系统<br><i></i>金融中心<br><i></i>公用事业<br><i></i>商用建筑",
+                    "file": [{
+                        "title": "Vertiv EPK系列低压成套开关设备 产品彩页.pdf",
+                        "url": "智能制造/EPK/Vertiv EPK系列低压成套开关设备 产品彩页.pdf"
+                    }],
+                    "video": "https://331.cdn-vod.huaweicloud.com/asset/1f4c9c018ef02128be8782c8edfa9191/play_video/2a811d94f677ad2bd5c491d098bb0f80.m3u8",
+                    "cover": "https://331.cdn-vod.huaweicloud.com/asset/1f4c9c018ef02128be8782c8edfa9191/cover/Cover0.jpg"
+                },
+                "note": "EPK2.0"
             },
             {
                 "title": "Vertiv Liebert PEX3工业空调",
-                "content": "",
-                "img": "",
+                "content": "专门针对工业严苛的应用场景而设计的房间级空调，核心元器件均为国际一线品牌，整机具有高可靠、长寿命、易使用、易维护的特点。",
+                "img": "./img/product_img/Vertiv Liebert PEX3工业空调.png",
                 "detail": {
-                    "trait": "冷量范围：30kw～100kw<br>400Pa高机外余压<br>-34~+45度室外温度可正常工作<br>室内机盘管&室外机整体采用电泳防腐<br>高可靠、长寿命：适应恶劣室外环境，保证空调稳定运行<br>易使用，易维护：智能稳定的恒温恒湿功能<br>专家级故障检测：上百项故障自诊断实现智能化运维",
-                    "scope": "电力设备间<br>高精密温控实验室<br>工业控制室及机柜间",
-                    "tmt": "电力<br>交通<br>化工<br>科研"
-                }
+                    "trait": "<i></i>冷量范围：30kw～100kw<br><i></i>400Pa高机外余压<br><i></i>-34~+45度室外温度可正常工作<br><i></i>室内机盘管&室外机整体采用电泳防腐<br><i></i>高可靠、长寿命：适应恶劣室外环境，保证空调稳定运行<br><i></i>易使用，易维护：智能稳定的恒温恒湿功能<br><i></i>专家级故障检测：上百项故障自诊断实现智能化运维",
+                    "scope": "<i></i>电力设备间<br><i></i>高精密温控实验室<br><i></i>工业控制室及机柜间",
+                    "tmt": "<i></i>电力<br><i></i>交通<br><i></i>化工<br><i></i>科研",
+                    "file": [{
+                        "title": "Vertiv 工业空调 产品彩页.pdf",
+                        "url": "智能制造/工业空调/Vertiv 工业空调 产品彩页.pdf"
+                    }],
+                    "video": "https://331.cdn-vod.huaweicloud.com/asset/cc489d97c78df23f4c42d7af3e6e14cc/play_video/4b209e5ef9bbe00226511a8f99a7967d.m3u8",
+                    "cover": "https://331.cdn-vod.huaweicloud.com/asset/cc489d97c78df23f4c42d7af3e6e14cc/cover/Cover0.jpg"
+                },
+                "note": "PEX3"
             },
             {
-                "title": "Vertiv电力直流电源系统",
-                "content": "",
-                "img": "",
+                "title": "Vertiv FP电力直流电源系统",
+                "content": "Vertiv™ FP40RM系列电力直流电源系统是维谛技术公司集多年开发和运行经验，采用DSP 控制技术，为满足变电站高压断路器操作和控制保护等设备供电需求而设计的不间断电源系统。",
+                "img": "./img/product_img/Vertiv电力直流电源系统.png",
                 "detail": {
-                    "trait": "高可靠<br>宽电压输入范围，可适应多种电网标准<br>超宽工作温度范围-40~＋65℃，环境适应能力强<br>智能化<br>具备完善的蓄电池管理功能，可全面适应VRLA、开口、镍镉电池充电<br>全图形化彩色高分辨率LCD 显示，触摸屏操作<br>具有以太网口、软硬件对时功能， MODBUS、IEC61850等多种后台协议可选<br>丰富的工业定制属性<br>高防护等级，可达IP42<br>可提供防尘防潮，防凝露，防腐蚀等多种防护措施<br>可提供符合IEC60146-1-1，CE要求设计<br>可提供自然冷散热、维护插座、柜内照明、模拟母线等设计",
-                    "scope": "10KV/20KV/110KV变电站<br>工厂、大楼供配电室<br>电厂、海外EPC",
-                    "tmt": "石化/冶金/建材/<br><br>智能制造工厂"
-                }
+                    "trait": "高可靠<br><i></i>宽电压输入范围，可适应多种电网标准<br><i></i>超宽工作温度范围-40~＋65℃，环境适应能力强<br>智能化<br><i></i>具备完善的蓄电池管理功能，可全面适应VRLA、开口、镍镉电池充电<br><i></i>全图形化彩色高分辨率LCD 显示，触摸屏操作<br><i></i>具有以太网口、软硬件对时功能， MODBUS、IEC61850等多种后台协议可选<br>丰富的工业定制属性<br><i></i>高防护等级，可达IP42<br><i></i>可提供防尘防潮，防凝露，防腐蚀等多种防护措施<br><i></i>可提供符合IEC60146-1-1，CE要求设计<br><i></i>可提供自然冷散热、维护插座、柜内照明、模拟母线等设计",
+                    "scope": "<i></i>10KV/20KV/110KV变电站<br><i></i>工厂、大楼供配电室<br><i></i>电厂、海外EPC",
+                    "tmt": "<i></i>石化/冶金/建材/轨道交通<br><i></i>电信大楼、数据中心<br><i></i>智能制造工厂",
+                    "file": [{
+                        "title": "Vertiv™ FP40RM系列电力直流电源系统.pdf",
+                        "url": "智能制造/FP/Vertiv™ FP40RM系列电力直流电源系统_2020_3月v2.pdf"
+                    }],
+                    "video": "https://331.cdn-vod.huaweicloud.com/asset/1d1d9954a96e375e4e33addb4bf2d68b/play_video/53abe76e4b3860b94c11ff3c3f76bbe4.m3u8",
+                    "cover": "https://331.cdn-vod.huaweicloud.com/asset/1d1d9954a96e375e4e33addb4bf2d68b/cover/Cover0.jpg"
+                },
+                "note": "FP"
             },
             {
-                "title": "Vertiv全场景工业UPS",
-                "content": "",
-                "img": "",
+                "title": "Veritv Liebert Industry工业UPS",
+                "content": "Industry系列工业UPS是VERTIV集多年的UPS设计、制造经验，结合最先进的控制技术和电力电子转换技术而开发的，专用于能源、冶金、制造等工业行业的UPS产品。",
+                "img": "./img/product_img/Vertiv全场景工业UPS.png",
                 "detail": {
-                    "trait": "高可靠：在复杂电网和恶劣环境中保障负载供电安全<br>IP31~IP54高防护等级设计<br>-20~+50度温度可正常工作<br>额定输出105%~110%可长期工作<br>专业性：为客户提供完整的系统解决方案<br>单相输出/三相输出10-200KVA<br>定制化电气隔离方案<br>成熟的单机、冗余系统整体解决方案<br>旁路变压器、输出配电柜<br>全数字控制技术<br>友善的LCD屏幕显示<br>灵活性：提供灵活的电池配置和管理方案<br>电池数量灵活设定，200V-400V可选择<br>支持铅酸、镍镉、锂电池管理(密封或开口)<br>电池黑启动、接地报警等选配件<br>具有以太网口、MODBUS接口和协议可选<br>支持2路通迅同时工作",
-                    "scope": "生产控制与保护系统<br>精密仪表和变送器、执行器、传感器<br>计算机信息系统<br>关键设备",
-                    "tmt": "医疗、交通、制造行业非数据中心场所<br>化工、冶金、水泥等重工业行业<br>石油和天然气等传统能源行业"
-                }
+                    "trait": "高可靠：在复杂电网和恶劣环境中保障负载供电安全<br><i></i>IP20~IP42高防护等级设计<br><i></i>-20~+50度温度可正常工作<br><i></i>额定输出105%~110%可长期工作<br>专业性：为客户提供完整的系统解决方案<br><i></i>单相输出/三相输出10-200KVA<br><i></i>定制化电气隔离方案<br><i></i>成熟的单机、冗余系统整体解决方案<br><i></i>旁路变压器、输出配电柜<br><i></i>全数字控制技术<br><i></i>友善的LCD屏幕显示<br>灵活性：提供灵活的电池配置和管理方案<br><i></i>电池数量灵活设定，200V-400V可选择<br><i></i>支持铅酸、镍镉、锂电池管理(密封或开口)<br><i></i>电池黑启动、接地报警等选配件<br><i></i>具有以太网口、MODBUS接口和协议可选<br><i></i>支持2路通迅同时工作",
+                    "scope": "<i></i>生产控制与保护系统<br><i></i>精密仪表和变送器、执行器、传感器<br><i></i>计算机信息系统<br><i></i>关键设备",
+                    "tmt": "<i></i>医疗、交通、制造行业非数据中心场所<br><i></i>化工、冶金、水泥等重工业行业<br><i></i>石油和天然气等传统能源行业",
+                    "file":[{
+                        "title": "Vertiv Liebert® Industry工业UPS 产品彩页.pdf",
+                        "url": "智能制造/工业UPS/Vertiv Liebert® Industry工业UPS 产品彩页.pdf"
+                    }],
+                    "video": "https://331.cdn-vod.huaweicloud.com/asset/dff681aa8abf7ba2d37d27b80297ea56/play_video/5f4096eff06e4e96f8ce5df84156dd05.m3u8",
+                    "cover": "https://331.cdn-vod.huaweicloud.com/asset/dff681aa8abf7ba2d37d27b80297ea56/cover/Cover0.jpg"
+                },
+                "note": "工业UPS"
             }
         ]
     },
     {
         "title": "专网保障",
         "img": "./img/online/page1_item_5.png",
+        "note": "专网保障",
         "list": [{
-                "title": "Vertiv SmartCabinet 2-E",
-                "content": "",
-                "img": "",
+                "title": "Vertiv NetSure IPE系列<br>自然冷模块化电源",
+                "content": "维谛技术最新推出新型自然冷电源产品，IP65高防护等级，多样化的电压输入制式，丰富的容量选择范围，极致的产品设计为严苛、复杂场景下无线网络部署保驾护航。",
+                "img": "./img/product_img/VertivNetSureIPE.png",
                 "detail": {
-                    "trait": "真·一体机，IT U位相比前代提升26%<br>具备ECO模式，合理利用外部冷源，静音节能<br>双层隔热玻璃门，杜绝凝露现象<br>可选前后钣金门，适配工业环境<br>标配智能三色灯，系统状态一目了然<br>不间断供电+不间断制冷，业务持续无短板<br>可选锂电，100%空间=300%续航<br>标配智能PDU，IT用电更透明，更安心<br>可选智能门锁，系统安防更有保障",
-                    "scope": "人员办公场所<br>网络接入间<br>边缘计算节点<br>轻粉尘工业环境<br>无独立机房的其它场所",
-                    "tmt": "物流<br>金融<br>政府<br>教育<br>医疗<br>地产<br>交通<br>制造<br>能源<br>冶金"
-                }
+                    "trait": "高可靠：<br><i></i>无风扇设计，自然散热，超静音低噪声工作模式；<br><i></i>高防护等级不低于IP65，完全适用于各种恶劣环境；<br><i></i>超宽满载工作温度范围：-40℃～+55℃，能应对最恶劣的应用环境；<br><i></i>输入限功率和温度限功率功能，保证系统在输入电压和温度变化时稳定工作。<br>高效节能：<br><i></i>峰值效率＞96％，满载效率＞94％。<br>配置灵活：<br><i></i>兼容交流220V、直流输入，用户可根据需要灵活接入；<br><i></i>安装方式灵活：壁挂式、杆式；<br><i></i>该系统模块可以并联运行，并通过CAN 总线进行通信，实现负载均分；<br><i></i>零切换备电：搭载铁锂电池系统，有效保证系统稳定持续运行；<br><i></i>集成NB-IoT、蓝牙、网口、RS485和CAN总线，手机APP指挥运维。",
+                    "scope": "<i></i>室外灯杆站<br><i></i>室外分布弱电井<br><i></i>RRU/AAU拉远站<br><i></i>室分微站<br><i></i>直流远供<br><i></i>行业应用",
+                    "tmt": "<i></i>电信<br><i></i>广电<br><i></i>铁路",
+                    "file": [{
+                        "title": "Vertiv NetSure™ IPE系列全时自然冷模块电源系统 产品彩页.pdf",
+                        "url": "专网保障/NetSure IPE/Vertiv NetSure™ IPE系列全时自然冷模块电源系统 产品彩页.pdf"
+                    }],
+                    "video": "https://331.cdn-vod.huaweicloud.com/asset/56dafbc7fa5e148507dbc1e9ca9f0d24/play_video/ac70ba39b85065cb291a027c98d22194.m3u8",
+                    "cover": "https://331.cdn-vod.huaweicloud.com/asset/56dafbc7fa5e148507dbc1e9ca9f0d24/cover/Cover0.jpg"
+                },
+                "note": "IPE"
             },
             {
-                "title": "Veritv NetSure 7100系列高功率密度嵌入式电源",
-                "img": "",
-                "content": "嵌入式电源系统的目标是在满足用户对性能需求的前提下，尽可能降低系统的能耗，节约机架内的设备空间。据运营商早期评估，5G单站功耗将是4G的2.5~3.5倍，随着5G建设的迅速推进，大量的移动通信网络基站面临着设备空间部署空间不足，单站功耗大的问题。为进一步提升5G基站电源的能效水平，改进电源整体功率密度，维谛技术特推出新一代嵌入式模组化电源，为进一步建设绿色5G提供助力。",
+                "title": "Veritv NetSure 7100系列<br>高功率密度嵌入式电源",
+                "img": "./img/product_img/VeritvNetSure7100系列高功率密度嵌入式电源.png",
+                "content": "高达98%的超高效率整流模块，4U高的紧致身材，540A的丰盈输出，近20路的输出配电空间，维谛技术全新高密电源重新定义通信传输网络的供电解决方案。",
                 "detail": {
-                    "trait": "高效节能：<br>高效模块效率>96%；<br>整流模块具有休眠节能专利技术，提高运行效率；<br>高度集成：超高功率密度，系统容量300A，高度仅4U；<br>具备风机智能调速功能，降低系统损耗并延长风机使用寿命。<br>高可靠：<br>宽电压输入：80~300Vac，强电网和油机适应性；<br>超宽工作范围：-40℃~75℃（45℃以上降额），适应各种复杂环境；<br>交流侧、直流侧、信号侧全方位防雷设计，提升系统防雷能力；<br>兼容配套铁锂电池模块，支持多模块并联，循环寿命1000次以上，是铅酸电池的3倍以上；全生命周前投资比铅酸电池低40%以上。<br>智能化：<br>具有USB、以太网口、智能干接点、RS485等多种通信接口，组网灵活；<br>整流模块具有独立的ID识别功能，便于用户的资产管理；<br>完善的蓄电池管理功能，有效延长蓄电池的使用寿命。",
-                    "scope": "室外通信基站（宏站、户外基站机柜供电）<br>3G，4G，5G室内覆盖<br>综合接入<br>RRU/AAU 独立供电<br>微站，拉远站<br>行业应用<br>数据中心48V供电",
-                    "tmt": "电信<br>金融<br>政府<br>部队<br>能源"
-                }
+                    "trait": "高效节能：<br><i></i>高效模块效率>96%；<br><i></i>整流模块具有休眠节能专利技术，提高运行效率；<br><i></i>高度集成：超高功率密度，系统容量300A，高度仅4U；<br><i></i>具备风机智能调速功能，降低系统损耗并延长风机使用寿命。<br>高可靠：<br><i></i>宽电压输入：80~300Vac，强电网和油机适应性；<br><i></i>超宽工作范围：-40℃~75℃（45℃以上降额），适应各种复杂环境；<br><i></i>交流侧、直流侧、信号侧全方位防雷设计，提升系统防雷能力；<br><i></i>兼容配套铁锂电池模块，支持多模块并联，循环寿命1000次以上，是铅酸电池的3倍以上；全生命周前投资比铅酸电池低40%以上。<br>智能化：<br><i></i>具有USB、以太网口、智能干接点、RS485等多种通信接口，组网灵活；<br><i></i>整流模块具有独立的ID识别功能，便于用户的资产管理；<br><i></i>完善的蓄电池管理功能，有效延长蓄电池的使用寿命。",
+                    "scope": "<i></i>室外通信基站（宏站、户外基站机柜供电）<br><i></i>3G，4G，5G室内覆盖<br><i></i>综合接入<br><i></i>RRU/AAU 独立供电<br><i></i>微站，拉远站<br><i></i>行业应用<br><i></i>数据中心48V供电",
+                    "tmt": "<i></i>电信<br><i></i>金融<br><i></i>政府<br><i></i>部队<br><i></i>能源",
+                    "video": "https://331.cdn-vod.huaweicloud.com/asset/07f5703c86695af3828f266a825a6300/play_video/b8090ca8bd5fa2377e9672f4e182605a.m3u8",
+                    "cover": "https://331.cdn-vod.huaweicloud.com/asset/07f5703c86695af3828f266a825a6300/cover/Cover0.jpg",
+                    "file": [
+                        {
+                            "title": "Vertiv NetSure 731 A91高功率密度嵌入式通信电源系统产品彩页.pdf",
+                            "url": "专网保障/NetSure731/VertivNetSure731A91高功率密度嵌入式通信电源系统产品彩页.pdf"
+                        }
+                    ]
+                },
+                "note": "7100"
             }
         ]
     },
     {
         "title": "服务4.0",
         "img": "./img/online/page1_item_6.png",
+        "note": "服务4.0",
         "list": [{
                 "title": "BIM+ 数据中心全生命周期服务与管理",
-                "content": "",
-                "img": "",
+                "content": "经过长期实践应用，维谛技术将数据中心的设计与建设、运维、改造升级与BIM (Building Information Modeling即建筑信息模型) 结合起来，实现全新的BIM+数据中心的全生命周期服务与管理。",
+                "img": "./img/product_img/BIM+ 数据中心全生命周期服务与管理.png",
                 "detail": {
-                    "trait": "所见即所得，所得即所用<br>数据中心的全生命周期服务与管理<br>规划阶段：方案评估与项目演示<br>设计阶段：方案设计与数据中心“DNA”搭建<br>施工阶段：保障工程验证与交付能力，“DNA”实施更可控<br>运营维护阶段：三维数据管理，让运维更智慧<br>升级改造阶段：改造风险的控制，让升级改造更易行<br>数据中心生命周期“DNA”的一脉传承",
-                    "scope": "数据中心规划与设计<br>数据中心施工模拟与指导<br>数据中心运维与管理<br>数据中心升级改造<br>BIM+可视化管理",
-                    "tmt": "新建数据中心<br>改造数据中心<br>金融<br>政府<br>教育<br>医疗<br>地产<br>交通<br>制造<br>能源<br>冶金"
-                }
+                    "trait": "<i></i>所见即所得，所得即所用<br><i></i>数据中心的全生命周期服务与管理<br><i></i>规划阶段：方案评估与项目演示<br><i></i>设计阶段：方案设计与数据中心“DNA”搭建<br><i></i>施工阶段：保障工程验证与交付能力，“DNA”实施更可控<br><i></i>运营维护阶段：三维数据管理，让运维更智慧<br><i></i>升级改造阶段：改造风险的控制，让升级改造更易行<br><i></i>数据中心生命周期“DNA”的一脉传承",
+                    "scope": "<i></i>数据中心规划与设计<br><i></i>数据中心施工模拟与指导<br><i></i>数据中心运维与管理<br><i></i>数据中心升级改造<br><i></i>BIM+可视化管理",
+                    "tmt": "<i></i>新建数据中心<br><i></i>改造数据中心<br><i></i>金融<br><i></i>政府<br><i></i>教育<br><i></i>医疗<br><i></i>地产<br><i></i>交通<br><i></i>制造<br><i></i>能源<br><i></i>冶金",
+                    "file": [{
+                        "title": "BIM+数据中心全生命周期服务与管理.pdf",
+                        "url": "服务4.0/BIM+ 数据中心全生命周期服务与管理/BIM+数据中心全生命周期服务与管理.pdf"
+                    }],
+                    "video": "https://331.cdn-vod.huaweicloud.com/asset/590a895c91ca030c36472cbd8f353d5e/play_video/f004caf5379f301b3ae4d7a0ecf9e0c2.m3u8"
+                },
+                "note": "BIM+"
             },
             {
-                "title": "Trellis-Facility 基础设施管理系统",
-                "content": "",
-                "img": "",
+                "title": "Trellis-Facility <br>基础设施管理系统",
+                "content": "随着虚拟化计算的逐渐深入，复杂的基础设施也需要进行灵活的资源调配以适应云计算过程中业务的高频快速迁移，为此基于FAAS数据中心设施资源虚拟化的思路，维谛技术推出Trellis-Facility基础设施管理系统。",
+                "img": "./img/product_img/Trellis-Facility 基础设施管理系统.png",
                 "detail": {
-                    "trait": "一站式管理配电、制冷以及安防，运维风险全把控；<br>可视化呈现场景、报表以及容量，运营需求全覆盖；<br>智能化管理能耗、人员以及资源，精细管理有保障；<br>基于3D可视化的监控解决方案；<br>配电管理实现供电故障根源定位；<br>通过温度云图跟踪热点的持续变化；<br>容量管理实现IT设施的用电、冷量和空间管理，并提供IT设施的上下架建议。<br>智能能耗分析预警，数据中心能耗情况全景站式，主动发送预警短信。",
-                    "scope": "人员办公场所<br>网络接入间<br>边缘计算节点<br>分布式机房<br>大型数据中心园区",
-                    "tmt": "数据中心<br>物流<br>金融<br>政府<br>教育<br>医疗<br>地产<br>交通<br>制造<br>能源<br>冶金"
-                }
-            },
-            {
-                "title": "机房巡检机器人",
-                "content": "维谛机房巡检机器人使用人工智能、物联网、大数据、云端等技术，推出可满足机房日常和深度巡检、智能安防、资产管理、自主管理的机房机器人巡检的创新服务方案。促使传统运维向标准化、数字化、自动化、智能化不断发展和演进，待人少值守、无人值守落地，将彻底改变数据中心运维业态。",
-                "img": "",
-                "detail": {
-                    "trait": "激光导航自动驾驶，多重防护安全高效；<br>超大跨度折臂设计，全高机柜直视巡察；<br>高速集群识别技术，高效资产稽核盘点；<br>捕捉热源气敏检测，数据AI物联云端；<br>深度巡检设备环境，提升运维效率质量；<br>建立主动预防预测，数据分析决策依据；<br>实现少人无人值守，提升企业竞争能力；<br>独创数据接口规范，解决系统融合瓶颈；",
-                    "scope": "数据中心<br>动力机房<br>通信机房<br>数据机房<br>变配电站",
-                    "tmt": "数据中心<br>电信<br>金融<br>政府<br>交通<br>制造<br>能源<br>医疗"
-                }
+                    "trait": "<i></i>一站式管理配电、制冷以及安防，运维风险全把控；<br><i></i>可视化呈现场景、报表以及容量，运营需求全覆盖；<br><i></i>智能化管理能耗、人员以及资源，精细管理有保障；<br><i></i>基于3D可视化的监控解决方案；<br><i></i>配电管理实现供电故障根源定位；<br><i></i>通过温度云图跟踪热点的持续变化；<br><i></i>容量管理实现IT设施的用电、冷量和空间管理，并提供IT设施的上下架建议。<br><i></i>智能能耗分析预警，数据中心能耗情况全景站式，主动发送预警短信。",
+                    "scope": "<i></i>人员办公场所<br><i></i>网络接入间<br><i></i>边缘计算节点<br><i></i>分布式机房<br><i></i>大型数据中心园区",
+                    "tmt": "<i></i>数据中心<br><i></i>物流<br><i></i>金融<br><i></i>政府<br><i></i>教育<br><i></i>医疗<br><i></i>地产<br><i></i>交通<br><i></i>制造<br><i></i>能源<br><i></i>冶金",
+                    "file": [{
+                        "title": "Trellis-Facility数据中心价值管家.pdf",
+                        "url": "服务4.0/Trellis-Facility 基础设施管理系统/Trellis-Facility数据中心价值管家_2019_v4.pdf"
+                    }],
+                    "video": "https://331.cdn-vod.huaweicloud.com/asset/e4c00e49a687d4bd0f22f55acd037420/play_video/3e0bc8f945f61d96b079d87ec58b8ed5.m3u8"
+                },
+                "note": "TF管理"
             },
             {
                 "title": "维谛技术虚拟现实VR培训",
                 "content": "维谛技术VR培训，是维谛技术培训中心推出的场景式，沉浸式，体验式培训系统，它以系统仿真为基础，营造数据中心机房运行操作，应急操作，典型故障处理等“自主实践”场景，加速学员的技能培养。",
-                "img": "",
+                "img": "./img/product_img/维谛技术虚拟现实VR培训.png",
                 "detail": {
-                    "trait": "工程师虚拟培训、考核、成绩统计、操作日志、内容分发管理的培训管理平台<br>VR模式和PC模式，兼顾沉浸式体验和便捷性学习；<br>一个培训课程划分为10多个3～5分钟小章节，便于利用碎片化时间学习；<br>覆盖安全PPE培训和PPE虚拟操作<br>提供UPS设备开关机/维修/延寿操作培训<br>机房设备典型故障和错误操作模拟；<br>覆盖设备级、系统级、机房级场景培训（规划）；<br>基于多物理场仿真的数字孪生模式，虚拟操作交互与仿真软件联动，模拟设备现实行为；",
-                    "scope": "服务人员安全培训<br>数据中心服务人员场景式虚拟操作培训<br>数据中心服务人员上岗考核资格认证",
-                    "tmt": "数据中心<br>能源"
-                }
+                    "trait": "<i></i>工程师虚拟培训、考核、成绩统计、操作日志、内容分发管理的培训管理平台<br><i></i>VR模式和PC模式，兼顾沉浸式体验和便捷性学习<br><i></i>一个培训课程划分为10多个3～5分钟小章节，便于利用碎片化时间学习<br><i></i>覆盖安全PPE培训和PPE虚拟操作<br><i></i>提供UPS设备开关机/维修/延寿操作培训<br><i></i>机房设备典型故障和错误操作模拟<br><i></i>覆盖设备级、系统级、机房级场景培训（规划）<br><i></i>基于多物理场仿真的数字孪生模式，虚拟操作交互与仿真软件联动，模拟设备现实行为",
+                    "scope": "<i></i>服务人员安全培训<br><i></i>数据中心服务人员场景式虚拟操作培训<br><i></i>数据中心服务人员上岗考核资格认证",
+                    "tmt": "<i></i>数据中心<br><i></i>能源",
+                    "video": "https://331.cdn-vod.huaweicloud.com/asset/249784f669df9039a4d9efceeffae5a0/play_video/686c89e06797149b9afd8d4e8e62b9d8.m3u8"
+                },
+                "note": "VR"
             },
             {
                 "title": "维谛睿维数字化运维管理系统",
                 "content": "维谛睿维数字化运维管理系统，简称睿维系统，是一个以大数据技术为基础的平台化解决方案，覆盖了数据中心及电信行业基础设施运维管理的主要业务范围及相关管理流程。",
-                "img": "",
+                "img": "./img/product_img/维谛睿维数字化运维管理系统.png",
                 "detail": {
-                    "trait": "从手工、经验和制度驱动传统运维到无纸化、数字化、一体化运维业务转型<br>涵盖数据中心基础设施运维人、事、物管理的方方面面<br>360度数据互联互通，消除数据孤岛<br>数据透明化，业务流程标准化，全流程可追溯<br>巡检维护移动化，数据异常提醒，轨迹管理，提升巡检维护效率<br>设备及关键元器件全生命周期管理<br>支持与DCIM监控系统对接，实现从告警到事件闭环全流程管理<br>支持与巡检机器人对接，实现机器人巡检计划自动下发、数据自动回传及异常自动转单<br>部署方式灵活，支持本地部署及云部署",
-                    "scope": "数据中心设施运维业务管理<br>通讯机房设施运维业务管理",
-                    "tmt": "各行业数据中心<br>运营商通讯机房"
-                }
+                    "trait": "<i></i>从手工、经验和制度驱动传统运维到无纸化、数字化、一体化运维业务转型<br><i></i>涵盖数据中心基础设施运维人、事、物管理的方方面面<br><i></i>360度数据互联互通，消除数据孤岛<br><i></i>数据透明化，业务流程标准化，全流程可追溯<br><i></i>巡检维护移动化，数据异常提醒，轨迹管理，提升巡检维护效率<br><i></i>设备及关键元器件全生命周期管理<br><i></i>支持与DCIM监控系统对接，实现从告警到事件闭环全流程管理<br><i></i>支持与巡检机器人对接，实现机器人巡检计划自动下发、数据自动回传及异常自动转单<br><i></i>部署方式灵活，支持本地部署及云部署",
+                    "scope": "<i></i>数据中心设施运维业务管理<br><i></i>通讯机房设施运维业务管理",
+                    "tmt": "<i></i>各行业数据中心<br><i></i>运营商通讯机房",
+                    "video": "https://331.cdn-vod.huaweicloud.com/asset/6a8b33e51a97a8028b1acc5d90cbd6b4/play_video/b1305a6d7ccfd35f1b68eb8dcb640168.m3u8"
+                },
+                "note": "睿维"
             }
         ]
     }

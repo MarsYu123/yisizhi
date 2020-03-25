@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>站外调用在线客服例子</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <!-- 在线客服依赖以下css和js文件,请按需引入 -->
+	<link rel="stylesheet" type="text/css" href="http://php-api2.issmart.com.cn/fastadmin/public/assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="http://php-api2.issmart.com.cn/fastadmin/public/assets/addons/kefu/css/kefu_default.css">
+	<script type="text/javascript" src="http://php-api2.issmart.com.cn/fastadmin/public/assets/libs/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="http://php-api2.issmart.com.cn/fastadmin/public/assets/libs/fastadmin-layer/dist/layer.js"></script>
+	<script type="text/javascript" src="http://php-api2.issmart.com.cn/fastadmin/public/assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<script type="text/javascript" src="http://php-api2.issmart.com.cn/fastadmin/public/assets/addons/kefu/js/kefu.js"></script>
+	<script type="text/javascript">
+	console.log()
+		KeFu.initialize('php-api2.issmart.com.cn', 'index', 666982);
+		// 头两个参数用关，第三个参数是用登录后得到的memberid作为参数，在调用此方法之前一定要调用登录方法，所以要加一个判断，不登录就显示一个死图标就行，登陆后调用这个方法就可以了
+		function a() {
+			console.log('s')
+		}
+	</script>
+	<script>
+		a()
+	</script>
+</body>
+</html>

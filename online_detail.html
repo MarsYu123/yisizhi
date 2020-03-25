@@ -4,19 +4,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
+    <title>2020Vertiv合作伙伴大会</title>
+    <link href="img/vertiv.png" rel="shortcut icon">
+    <!-- 在线客服依赖以下css和js文件,请按需引入 -->
+    <link rel="stylesheet" type="text/css"
+        href="https://php-api2.issmart.com.cn/fastadmin/public/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://php-api2.issmart.com.cn/fastadmin/public/assets/addons/kefu/css/kefu_default.css">
+    <script type="text/javascript" src="https://cdn.polyfill.io/v2/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript"
+        src="https://php-api2.issmart.com.cn/fastadmin/public/assets/libs/jquery/dist/jquery.min.js">
+    </script>
+    <script type="text/javascript" src="https://php-api2.issmart.com.cn/fastadmin/public/assets/addons/kefu/js/kefu.js">
+    </script>
+    <script type="text/javascript"
+        src="https://php-api2.issmart.com.cn/fastadmin/public/assets/libs/fastadmin-layer/dist/layer.js">
+    </script>
+    <script type="text/javascript"
+        src="https://php-api2.issmart.com.cn/fastadmin/public/assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/swiper.min.css">
     <link rel="stylesheet" href="./css/video-js.min.css">
     <script src="./js/index.js"></script>
-    <script src="./js/jquery.min.js"></script>
+    <!-- <script src="./js/jquery.min.js"></script> -->
     <script src="./js/video.min.js"></script>
-    <script src="./js/vue.js"></script>
+    <script src="./js/vue.min.js"></script>
+    <script src="./js/videojs-contrib-hls.min.js"></script>
     <script src="./js/online.js"></script>
+    <script>
+        function isIE() { //ie?
+            if (!!window.ActiveXObject || "ActiveXObject" in window)
+                return true;
+            else
+                return false;
+        }
+        if (isIE()) {
+            document.write(
+                '<div class="ie_text" style="display:block">您的当前浏览器无法正常显示该网站内容，建议使用以下浏览器，以获得最佳体验：Chrmoe43+以上版本、FireFox38+以上版本、EDGE。</div>'
+                )
+        }
+    </script>
 </head>
 
 <body>
     <div id="app">
+        <publis_login v-if="showLogin" @submit="login" @clear="showLogin = false"></publis_login>
         <!-- <div class="mb"></div> -->
         <div class="vertiv">
             <div class="nav">
@@ -25,26 +57,33 @@
                         <img src="./img/logo.png" alt="">
                     </div>
                     <div class="nav-right">
-                        <div class="nav-item" :class="{active:i.active}" v-for="i in nav">
-                            <a :href="i.active?'./online.html':'./index.html'">{{i.name}}</a>
+                        <div class="nav-item" :class="{active:i.active}" v-for="(i,index) in nav">
+                            <a @click="toHome(index)">{{i.name}}</a>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="vertiv-online" v-if="onlineList.length">
-                <div class="chat">
+                <div class="chat" @click="showLogin = true">
                     <i class=chat_i></i>
                 </div>
+                <div class="back" @click="javascript:window.history.back(-1)">
+                    <i></i>
+                </div>
+                <div class="vertiv-online-crumbs">
+                    线上展厅 <i></i> Power Train <i></i> Vertiv Liebert APM160
+                    三合一智能电力模组
+                </div>
                 <div class="vertiv-online-detail">
-                    <div class="detail-title">
-                        {{onlineList[listIndex].list[detailIndex].title}}
+                    <div class="detail-title" v-html="onlineList[listIndex].list[detailIndex].title">
                     </div>
                     <div class="detail-box">
                         <div class="video">
                             <video id="example_video_1" class="video-js vjs-default-skin vjs-big-play-centered"
-                                width="724" height="453" v-if="onlineList[listIndex].list[detailIndex].detail.video">
-                                <source :src="onlineList[listIndex].list[detailIndex].detail.video" type="video/mp4">
+                                width="807" height="405" v-if="onlineList[listIndex].list[detailIndex].detail.video" :poster='onlineList[listIndex].list[detailIndex].detail.cover'>
+                                <source :src="onlineList[listIndex].list[detailIndex].detail.video"
+                                    type="application/x-mpegURL">
                             </video>
                         </div>
                         <div class="detail-info">
@@ -52,8 +91,8 @@
                                 <div class="title">
                                     产品介绍
                                 </div>
-                                <div class="text" style="margin-bottom: 19px;">
-                                    {{onlineList[listIndex].list[detailIndex].content}}
+                                <div class="text" style="margin-bottom: 19px;"
+                                    v-html="onlineList[listIndex].list[detailIndex].detail.info || onlineList[listIndex].list[detailIndex].content">
                                 </div>
                             </template>
                             <template v-if='onlineList[listIndex].list[detailIndex].detail.about'>
@@ -72,29 +111,42 @@
                                     资料下载
                                 </div>
                                 <div class="download">
-                                    <div class="download-item" v-for="i in onlineList[listIndex].list[detailIndex].detail.file">
-                                        <i class="icon"></i>{{i.title}} <a class="view" :href="'http://phptest.issmart.com.cn/pdf_view/web?url='+i.url" target="_blank"></i>
+                                    <div class="download-item">
+                                        <i
+                                            class="icon"></i>{{onlineList[listIndex].list[detailIndex].detail.file[0].title}}
+                                        <a class="view"
+                                            :href="'https://php-api2.issmart.com.cn/pdf_view/web?url=https://php-api2.issmart.com.cn/2020vertivdata/线上展厅/'+onlineList[listIndex].list[detailIndex].detail.file[0].url"
+                                            target="_blank" @click="openFile"></a>
+                                        <a :href="'https://php-api2.issmart.com.cn/pdf_view/web?url=https://php-api2.issmart.com.cn/2020vertivdata/线上展厅/'+onlineList[listIndex].list[detailIndex].detail.file[0].url"
+                                            class="file_down" target="_blank" @click="openFile"></a>
                                     </div>
                                 </div>
                             </template>
                         </div>
                     </div>
                     <div class="detail-msg">
-                        <div class="title">
-                            系统特点
-                        </div>
-                        <div class="text" v-html='onlineList[listIndex].list[detailIndex].detail.trait'>
-                        </div>
-                        <div class="title">
-                            适用范围
-                        </div>
-                        <div class="text" v-html='onlineList[listIndex].list[detailIndex].detail.scope'>
-                        </div>
-                        <div class="title">
-                            应用行业
-                        </div>
-                        <div class="text" v-html='onlineList[listIndex].list[detailIndex].detail.tmt'>
-                            金融、制造、能源、运营商、政府
+                        <div class="detail-msg-box">
+                            <div class="top" :class="{wide: onlineList[listIndex].list[detailIndex].note === 'APT'}">
+                                <div class="title">
+                                    系统特点
+                                </div>
+                                <div class="text" v-html='onlineList[listIndex].list[detailIndex].detail.trait'>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="title">
+                                    适用范围
+                                </div>
+                                <div class="text" v-html='onlineList[listIndex].list[detailIndex].detail.scope'>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="title">
+                                    应用行业
+                                </div>
+                                <div class="text" v-html='onlineList[listIndex].list[detailIndex].detail.tmt'>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="openVideo" v-if="isOpenVideo">
@@ -110,16 +162,13 @@
             </div>
         </div>
     </div>
+    <script>
+        var winHeight = window.innerHeight;
+        var scale = winHeight / 910
+        if (winHeight < 880) {
+            $(".vertiv-online-detail").css('transform', 'scale(' + scale + ') ')
+        }
+    </script>
 </body>
-
-<script>
-    // setTimeout(function () {
-    //     var player = videojs('example_video_1', {
-    //         controls: true,
-    //         loop: true,
-    //         preload: 'auto'
-    //     });
-    // }, 500)
-</script>
 
 </html>
