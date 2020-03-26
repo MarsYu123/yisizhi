@@ -925,7 +925,7 @@ body{
                     }
 
                     .swiper-slide {
-                        transform: translateX(0);
+                        transform: translateY(0);
                     }
                 }
             }
@@ -944,7 +944,7 @@ body{
                         &-prev,
                         &-active,
                         &-next {
-                            transform: translateX(-1200px);
+                            transform: translateY(-1000px);
                         }
 
                         &-prev {
@@ -952,11 +952,11 @@ body{
                         }
 
                         &-active {
-                            transition: all .3s 1s;
+                            transition: all .3s .8s;
                         }
 
                         &-next {
-                            transition: all .3s .8s;
+                            transition: all .3s 1s;
                         }
 
                         &-active {
@@ -1594,7 +1594,7 @@ body{
         &_clear {
             position: absolute;
             right: -40px;
-            top: -118px;
+            top: -58px;
             width: 40px;
             height: 40px;
             background-image: url(../img/login-close.png);
@@ -1721,6 +1721,7 @@ body{
                     color: #585858;
                     font-size: 14px;
                     margin-bottom: 37px;
+                    cursor: pointer;
                     span{
                         color: #FF732D;
                     }
@@ -1729,7 +1730,6 @@ body{
                     width: 100px;
                     height: 45px;
                     position: absolute;
-                    background: linear-gradient(to right, #fea03b, #ff732d);
                     font-size: 18px;
                     color: #fff;
                     text-align: center;
@@ -1737,6 +1737,10 @@ body{
                     cursor: pointer;
                     right: 55px;
                     bottom: -22px;
+                    background: #cdc7c0;
+                    &.active{
+                        background: linear-gradient(to right, #fea03b, #ff732d);
+                    }
                 }
             }
             &.success{
@@ -1858,6 +1862,7 @@ body{
             margin-top: 10px;
             display: block;
             text-decoration: underline;
+            cursor: pointer;
         }
 
         &_submit {

@@ -6,8 +6,7 @@
     <meta name="viewport"
         content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
     <title>2020Vertiv合作伙伴大会</title>
-    <link href="img/vertiv.png" rel="shortcut icon">
-    <!-- 在线客服依赖以下css和js文件,请按需引入 -->
+    <link href="img/vertiv.png" rel="shortcut icon"> <!-- 在线客服依赖以下css和js文件,请按需引入 -->
     <link rel="stylesheet" type="text/css"
         href="https://php-api2.issmart.com.cn/fastadmin/public/assets/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css"
@@ -22,7 +21,7 @@
     </script>
     <script type="text/javascript"
         src="https://php-api2.issmart.com.cn/fastadmin/public/assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="./css/mobile.css?v=4.5">
+    <link rel="stylesheet" href="./css/mobile.css?v=5.1">
     <!-- <link rel="stylesheet" href="./css/style.css"> -->
     <link rel="stylesheet" href="./css/swiper.min.css">
 </head>
@@ -60,7 +59,7 @@
     </div>
 
     <div id="app">
-        
+
         <publis_login v-if="showLogin" @submit="login" @clear="showLogin = false"></publis_login>
         <div class="vertiv">
             <div class="nav">
@@ -84,7 +83,7 @@
                             大会议程
                         </div>
                         <div class="nav-list-item" v-if="openReYery">
-                            精彩回顾
+                            精彩瞬间
                         </div>
                         <div class="nav-list-item">
                             往届回顾
@@ -309,7 +308,7 @@
     <!-- <script src="./js/jquery.min.js"></script> -->
     <script src="./js/index.js?v=1.1"></script>
     <script src="./js/swiper.min.js"></script>
-    <script src="./js/vue.min.js"></script>
+    <script src="./js/vue.js"></script>
     <script src="./js/online.js?v=1.1"></script>
     <script>
         "use strict";
@@ -398,26 +397,32 @@
             active: true
         }];
         var reviewList = [{
-            msg: '石化行业关键设备和控制系统供电安全',
-            name: '田军1'
+            msg: '维谛技术（Vertiv）上市是一个新的起点，将有助于进一步拓宽融资渠道，实现稳定且长远的发展目标，给客户带来更先进的产品方案和更优质的服务体验，并基于品牌价值和市场影响力的提升，为合作伙伴创造更大的业务拓展空间。',
+            name: ' --维谛技术（Vertiv）北亚区总裁<br>祝金程'
         }, {
-            msg: '石化行业关键设备和控制系统供电安全',
-            name: '田军2'
+            msg: '面对未来复杂的市场趋势，维谛技术（Vertiv）将基于各种场景推出全新产品矩阵。同时伴随全新的品牌/营销护航计划，以数字化赋能，帮助合作伙伴实现商机发掘，创造丰富的“能变现的价值”。',
+            name: '--维谛技术（Vertiv）中国区市场营销&产品应用副总裁<br>田军',
+            img: './img/review/review_02.jpg'
         }, {
-            msg: '石化行业关键设备和控制系统供电安全',
-            name: '田军3'
+            msg: '维谛技术（Vertiv）在2020年将重点围绕“新产品市场投放和推广、全方位渠道培训赋能、跨平台销售、销售激励政策、加大授信支持”五个维度全面展开全新的渠道销售策略。',
+            name: '--维谛技术（Vertiv）中国区销售副总裁<br>崔益彬',
+            img: './img/review/review_03.jpg'
         }, {
-            msg: '石化行业关键设备和控制系统供电安全',
-            name: '田军4'
+            msg: '“启于延保合作、商机合作挖掘、维谛技术（Vertiv）主动赋能、项目合作运作、维谛技术（Vertiv）完美交付，是实现双方合作共赢的基础。“合作伙伴的客户优势、维谛技术（Vertiv）的服务优势，将使得双方的合作能进一步做大服务市场的‘蛋糕’。”',
+            name: '--维谛技术（Vertiv）中国区服务副总裁<br>丁麒钢',
+            img: './img/review/review_04.jpg'
         }, {
-            msg: '石化行业关键设备和控制系统供电安全',
-            name: '田军5'
+            msg: '作为维谛技术（Vertiv）的钻石级行业合作伙伴，双方在产品、服务领域的合作中业绩持续增长，并在维谛技术（Vertiv）提供的全面支持下，公司团队的专业能力也得到了持续提升。',
+            name: '--北京艾瑞信系统工程技术有限责任公司总经理<br>果小巍',
+            img: './img/review/review_05.jpg'
         }, {
-            msg: '石化行业关键设备和控制系统供电安全',
-            name: '田军6'
+            msg: ' 维谛技术（Vertiv）拥有产品、技术、市场、管理四个方面的优势，且产品线齐全，客户认可度高，还拥有全面的支持策略，快速响应速度，专业团队常常下沉一线。通过双方长期合作实现了飞速发展。',
+            name: '--北京意科瑞思能源技术有限公司总经理<br>谭捷',
+            img: './img/review/review_06.jpg'
         }, {
-            msg: '石化行业关键设备和控制系统供电安全',
-            name: '田军7'
+            msg: '小中有大，大有可为。在与维谛技术（Vertiv）的合作中，业务发展方向逐渐转向ITC业务拓展，并取得了不俗的成就。在未来，跟随维谛技术（Vertiv）的步伐，争做ITC分销领跑者。',
+            name: '--杭州雷创科技有限公司总经理<br>盛伟',
+            img: './img/review/review_07.jpg'
         }];
 
         function agendaItem(obj) {
@@ -433,9 +438,10 @@
 
             var _class = !obj.name ? 'none' : '';
 
-            return '<div class="review-item ' + _class + '">' + '<div class="review-item-img">' + '<img src="' + obj
+            return '<div class="swiper-slide"><div class="review-item ' + _class + '">' +
+                '<div class="review-item-img">' + '<img src="' + obj
                 .img + '" alt="">' + '</div>' + '<div class="review-item-info">' + '<div class="msg">' + obj.msg +
-                '</div>' + '<div class="name">' + '——' + obj.name + '</div>' + '</div>' + '</div>';
+                '</div>' + '<div class="name">' + obj.name + '</div>' + '</div>' + '</div></div>';
         }
 
         function rem2px(num) {
@@ -603,41 +609,20 @@
             }
 
             function reviewInit(data) {
-                var num = 0;
-                var arr = [
-                    []
-                ];
                 data.forEach(function (res) {
-                    var arrLength = arr.length;
-                    num++;
-
-                    if (num > 1) {
-                        num = 0;
-                        arr.push([]);
-                    }
-
-                    arr[arrLength - 1].push(reviewItem(res));
+                    $('.review-wrapper').append(reviewItem(res))
                 });
-                if (arr[arr.length - 1].length !== 2) arr[arr.length - 1].push(reviewItem());
-                arr.forEach(function (res) {
-                    var $item = $('<div class="swiper-slide"></div>');
-                    $item.appendTo('.review-wrapper');
-
-                    (function ($item) {
-                        res.forEach(function (html) {
-                            $item.append(html);
-                        });
-                    })($item);
-                });
-                $('.review-wrapper').append('<div class="swiper-slide"></div>');
                 var reviewSwiper = new Swiper('#reviewSwiper', {
-                    slidesPerView: 'auto',
-                    spaceBetween: rem2px(.53),
-                    initialSlide: 1,
-                    // loop: true,
-                    // loopAdditionalSlides: 2,
-                    // centeredSlidesBounds: true,
-                    slidesOffsetBefore: rem2px(.53)
+                    slidesPerView: 1,
+                    centeredSlides: true,
+                    centeredSlidesBounds: true,
+                    centerInsufficientSlides: true,
+                    spaceBetween: rem2px(-4),
+                    slidesOffsetBefore: rem2px(1),
+                    initialSlide: 0,
+                    nested: true,
+                    loop: true,
+                    loopAdditionalSlides: 2,
                 }); //  加载议程数据
             }
 

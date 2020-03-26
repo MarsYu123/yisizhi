@@ -202,7 +202,7 @@ $(function() {
   Vue.component("publis_login", {
     data: function data() {
       return {
-        loginType: 'login',
+        loginType: "login",
         type: "phone",
         phone: null,
         email: null,
@@ -213,7 +213,18 @@ $(function() {
         inputError: false,
         lock: false,
         time: 60,
-        timeFn: null
+        timeFn: null,
+        loginVerif: false,
+        sign_name: null,
+        sign_phone: null,
+        sign_code: null,
+        sign_email: null,
+        sign_company: null,
+        sign_position: null,
+        sign_city: null,
+        checkSignActive: false,
+        signPhoneError: false,
+        getVerif: true
       };
     },
     watch: {
@@ -251,22 +262,90 @@ $(function() {
       },
       code: function code(val) {
         this.code = val.slice(0, 6);
+      },
+      sign_phone: function sign_phone(val) {
+        var phoneReg = /^[1][3,4,5,6,7,8,9][0-9]{9}$/;
+        this.signPhoneError = phoneReg.test(val)
+        this.getVerif = false
+      },
+      sign_code: function sign_code(val) {
+        this.sign_code = val.slice(0, 6);
+        this.getVerif = false
       }
     },
-    mounted: function () {
-      this.getLoginId()
+    computed: {
+      isSign: function isSign() {
+        if(!this.sign_name) return false
+        if(!this.signPhoneError) return false
+        if(!this.sign_code) return false
+        if(!this.sign_email) return false
+        if(!this.sign_company) return false
+        if(!this.sign_position) return false
+        if(!this.sign_city) return false
+        if(!this.loginVerif) return false
+        if(!this.checkSignActive) return false
+        return true
+      }
+    },
+    mounted: function() {
     },
     methods: {
-      getLoginId: function getLoginId (phone) {
-        $http('/live/app/getMSVerifyCode','post',{eventId: 536,phone:phone}).then(function (res) {
-          console.log(res)
+      checkSign: function checkSign() {
+        this.checkSignActive = !this.checkSignActive
+      },
+      getLoginId: function getLoginId() {
+        var that = this
+        if(that.lock) return
+        that.settime();
+        if(!that.signPhoneError) return
+        $http("/live/app/getMSVerifyCode", "post", {
+          eventId: 536,
+          phone: that.sign_phone
         })
       },
-      getLoginVerif: function getLoginVerif(phone,code) {
-        $http('/attendees/getRegisterState','post',{eventId: 536,phone:phone,code:code})
+      getLoginVerif: function getLoginVerif() {
+        var that = this
+        if(that.getVerif) return
+        if(!that.signPhoneError) return
+        if(!that.sign_code || that.sign_code.length !== 6) return
+        $http("/attendees/getRegisterState", "post", {
+          eventId: "536",
+          phone: that.sign_phone,
+          code: that.sign_code
+        }).then(function (res) {
+          that.getVerif = true
+          if(!res.meta.success){
+            that.loginVerif = false
+            alert(res.meta.message)
+          }else{
+            if(res.data.ifRegister == 'yes'){
+              that.loginVerif = true
+            }
+          }
+        });
       },
-      signIn: function signIn(params) {
-        $http('/attendees/registerPc','post',data)
+      signIn: function signIn() {
+        var that = this
+        if(!that.isSign) return
+        var data = {
+          "memberName": that.sign_name,
+          "memberPhone": that.sign_phone,
+          "memberEmail": that.sign_email,
+          "positionCode": that.sign_position,
+          "province": that.sign_city,
+          "companyName": that.sign_company,
+          "eventId": "536",
+          "formId": "1175"
+        }
+        $http("/attendees/registerPc", "post", data).then(function (res) {
+          if(res.meta.success){
+            if(res.data.msg == '报名成功'){
+              that.loginType = 'success'
+            }
+          }else{
+            alert(res.meta.message)
+          }
+        });
       },
       settime: function settime() {
         this.lock = true;
@@ -382,143 +461,13 @@ $(function() {
       },
       blur: function blur() {
         window.scroll(0, 0);
+      },
+      checkLogin: function checkLogin(type) {
+        Object.assign(this.$data,this.$options.data())
+        this.loginType = type
       }
     },
-    template:`     <div class="public_login">
-    <div class="login_mb"></div>
-    <div class="login_box" :class="loginType">
-      <div class="login_cont" :class="loginType">
-        <div>
-          <div class="login_clear" @click="$emit('clear')"></div>
-          <i class="ball"></i>
-          <template v-if='loginType === "login"'>
-            <div class="login_title">
-              <div class="login_check" :class="{active: type === 'phone'}" @click="toggle('phone')">
-                手机登录
-              </div>
-              <div class="login_check" :class="{active: type === 'email'}" @click="toggle('email')">
-                邮箱登录
-              </div>
-            </div>
-            <div class="login_form">
-              <div class="userName form_input">
-                <input type="text" placeholder="请输入手机号码" @blur="blur" v-model="phone" v-if="type === 'phone'">
-                <input type="text" placeholder="请输入邮箱号码" @blur="blur" v-model="email" v-if="type === 'email'">
-              </div>
-              <div class="error" v-if="inputError">{{type==='email'?emailError:phoneError}}</div>
-              <div class="code form_input">
-                <input type="text" placeholder="请输入验证码" @blur="blur" v-model="code">
-                <div class="getCode" :class="{active:!lock}" @click="getCode">
-                  {{lock?'('+time+') s 后重新获取':'获取验证码'}}
-                </div>
-              </div>
-              <div class="error" v-if="submitError">{{submitError}}</div>
-              <a class="login_toSign">
-                报名注册 >
-              </a>
-            </div>
-            <div class="login_submit" @click="submit"></div>
-          </template>
-          <template v-if='loginType === "sign" '>
-            <div class="login_title login_check active">
-              注册
-            </div>
-            <div class="sign_form">
-              <div class="input">
-                <div class="head">
-                  姓名：
-                </div>
-                <div class="cont">
-                  <input type="text">
-                </div>
-              </div>
-              <div class="input">
-                <div class="head">
-                  手机号：
-                </div>
-                <div class="cont">
-                  <input type="text">
-                  <div class="verify">
-                    发送验证码
-                  </div>
-                </div>
-              </div>
-              <div class="input">
-                <div class="head">
-                  验证码：
-                </div>
-                <div class="cont">
-                  <input type="text">
-                </div>
-              </div>
-              <div class="input">
-                <div class="head">
-                  邮箱：
-                </div>
-                <div class="cont">
-                  <input type="text">
-                </div>
-              </div>
-              <div class="input">
-                <div class="head">
-                  公司名：
-                </div>
-                <div class="cont">
-                  <input type="text">
-                </div>
-              </div>
-              <div class="input">
-                <div class="head">
-                  职位：
-                </div>
-                <div class="cont">
-                  <input type="text">
-                </div>
-              </div>
-              <div class="input" style="margin-bottom:.1rem">
-                <div class="head">
-                  省份：
-                </div>
-                <div class="cont">
-                  <input type="text">
-                </div>
-              </div>
-              <div class="check">
-                <div>
-                  <i class='active'></i>
-                  我愿意接受维谛技术（Vertiv）及其授权的合作伙伴为我发送维谛技术（Vertiv）产品、解决方案或服务的相关信息。我知道随时可以取消订阅。
-                </div>
-                <span>*</span>点击“提交”，表明我理解并同意按照维谛技术(Vertiv) <a href="">隐私保护</a>和<a href="">法律声明</a>使用和传递我的个人信息。
-              </div>
-              <div class="toLogin">
-                已有账号，<span>马上登陆</span>
-              </div>
-            </div>
-            <div class="sign_submit" @click="sign_submit">
-              提交
-            </div>
-          </template>
-          <template v-if='loginType === "success"'>
-            <div class="login_title">
-              <div class="login_check" @click="toLogin">
-                登录
-              </div>
-              <div class="login_check active">
-                注册
-              </div>
-            </div>
-            <img src="./img/sign_success.png" alt="" class="success_img">
-            <div class="h1">
-              您的报名信息已提交给工作人员审核
-            </div>
-            <div class="tips">
-              审核结果将会通过短信，<br>邮件等方式通知，请您耐心等待
-            </div>
-          </template>
-        </div>
-      </div>
-    </div>
-  </div>`
+    template: "<div class=\"public_login\">\n    <div class=\"login_mb\"></div>\n    <div class=\"login_box\" :class=\"loginType\">\n      <div class=\"login_cont\" :class=\"loginType\">\n        <div>\n          <div class=\"login_clear\" @click=\"$emit('clear')\"></div>\n          <i class=\"ball\"></i>\n          <template v-if='loginType === \"login\"'>\n            <div class=\"login_title\">\n              <div class=\"login_check\" :class=\"{active: type === 'phone'}\" @click=\"toggle('phone')\">\n                \u624B\u673A\u767B\u5F55\n              </div>\n              <div class=\"login_check\" :class=\"{active: type === 'email'}\" @click=\"toggle('email')\">\n                \u90AE\u7BB1\u767B\u5F55\n              </div>\n            </div>\n            <div class=\"login_form\">\n              <div class=\"userName form_input\">\n                <input type=\"text\" placeholder=\"\u8BF7\u8F93\u5165\u624B\u673A\u53F7\u7801\" @blur=\"blur\" v-model=\"phone\" v-if=\"type === 'phone'\">\n                <input type=\"text\" placeholder=\"\u8BF7\u8F93\u5165\u90AE\u7BB1\u53F7\u7801\" @blur=\"blur\" v-model=\"email\" v-if=\"type === 'email'\">\n              </div>\n              <div class=\"error\" v-if=\"inputError\">{{type==='email'?emailError:phoneError}}</div>\n              <div class=\"code form_input\">\n                <input type=\"text\" placeholder=\"\u8BF7\u8F93\u5165\u9A8C\u8BC1\u7801\" @blur=\"blur\" v-model=\"code\">\n                <div class=\"getCode\" :class=\"{active:!lock}\" @click=\"getCode\">\n                  {{lock?'('+time+') s \u540E\u91CD\u65B0\u83B7\u53D6':'\u83B7\u53D6\u9A8C\u8BC1\u7801'}}\n                </div>\n              </div>\n              <div class=\"error\" v-if=\"submitError\">{{submitError}}</div>\n              <a class=\"login_toSign\" @click=\"checkLogin('sign')\">\n                \u62A5\u540D\u6CE8\u518C >\n              </a>\n            </div>\n            <div class=\"login_submit\" @click=\"submit\"></div>\n          </template>\n\n          <template v-if='loginType === \"sign\" '>\n            <div class=\"login_title login_check active\">\n              \u6CE8\u518C\n            </div>\n            <div class=\"sign_form\">\n              <div class=\"input\">\n                <div class=\"head\">\n                  \u59D3\u540D\uFF1A\n                </div>\n                <div class=\"cont\">\n                  <input type=\"text\" v-model=\"sign_name\">\n                </div>\n              </div>\n              <div class=\"input\">\n                <div class=\"head\">\n                  \u624B\u673A\u53F7\uFF1A\n                </div>\n                <div class=\"cont\">\n                  <input type=\"text\" v-model=\"sign_phone\" @blur=\"getLoginVerif\">\n                  <div class=\"verify\" :class=\"{active:(signPhoneError&&!lock)}\" @click=\"getLoginId\">\n                    {{lock?'('+time+') s \u540E\u91CD\u65B0\u83B7\u53D6':'\u53D1\u9001\u9A8C\u8BC1\u7801'}}\n                  </div>\n                </div>\n              </div>\n              <div class=\"input\">\n                <div class=\"head\">\n                  \u9A8C\u8BC1\u7801\uFF1A\n                </div>\n                <div class=\"cont\">\n                  <input type=\"text\" v-model=\"sign_code\" @blur=\"getLoginVerif\">\n                </div>\n              </div>\n              <div class=\"input\">\n                <div class=\"head\">\n                  \u90AE\u7BB1\uFF1A\n                </div>\n                <div class=\"cont\">\n                  <input type=\"text\" v-model=\"sign_email\" @blur=\"getLoginVerif\">\n                </div>\n              </div>\n              <div class=\"input\">\n                <div class=\"head\">\n                  \u516C\u53F8\u540D\uFF1A\n                </div>\n                <div class=\"cont\">\n                  <input type=\"text\" v-model=\"sign_company\" @blur=\"getLoginVerif\">\n                </div>\n              </div>\n              <div class=\"input\">\n                <div class=\"head\">\n                  \u804C\u4F4D\uFF1A\n                </div>\n                <div class=\"cont\">\n                  <input type=\"text\" v-model=\"sign_position\" @blur=\"getLoginVerif\">\n                </div>\n              </div>\n              <div class=\"input\" style=\"margin-bottom:.1rem\">\n                <div class=\"head\">\n                  \u7701\u4EFD\uFF1A\n                </div>\n                <div class=\"cont\">\n                  <input type=\"text\" v-model=\"sign_city\" @blur=\"getLoginVerif\">\n                </div>\n              </div>\n              <div class=\"check\">\n                <div @click=\"checkSign\">\n                  <i :class=\"{active:checkSignActive}\"></i>\n                  \u6211\u613F\u610F\u63A5\u53D7\u7EF4\u8C1B\u6280\u672F\uFF08Vertiv\uFF09\u53CA\u5176\u6388\u6743\u7684\u5408\u4F5C\u4F19\u4F34\u4E3A\u6211\u53D1\u9001\u7EF4\u8C1B\u6280\u672F\uFF08Vertiv\uFF09\u4EA7\u54C1\u3001\u89E3\u51B3\u65B9\u6848\u6216\u670D\u52A1\u7684\u76F8\u5173\u4FE1\u606F\u3002\u6211\u77E5\u9053\u968F\u65F6\u53EF\u4EE5\u53D6\u6D88\u8BA2\u9605\u3002\n                </div>\n                <span>*</span>\u70B9\u51FB\u201C\u63D0\u4EA4\u201D\uFF0C\u8868\u660E\u6211\u7406\u89E3\u5E76\u540C\u610F\u6309\u7167\u7EF4\u8C1B\u6280\u672F(Vertiv) <a href=\"\">\u9690\u79C1\u4FDD\u62A4</a>\u548C<a href=\"\">\u6CD5\u5F8B\u58F0\u660E</a>\u4F7F\u7528\u548C\u4F20\u9012\u6211\u7684\u4E2A\u4EBA\u4FE1\u606F\u3002\n              </div>\n              <div class=\"toLogin\" @click=\"checkLogin('login')\">\n                \u5DF2\u6709\u8D26\u53F7\uFF0C<span>\u9A6C\u4E0A\u767B\u9646</span>\n              </div>\n            </div>\n            <div class=\"sign_submit\" :class=\"{active:isSign}\" @click=\"signIn\">\n              \u63D0\u4EA4\n            </div>\n          </template>\n\n          <template v-if='loginType === \"success\"'>\n            <div class=\"login_title\">\n              <div class=\"login_check\" @click=\"checkLogin('login')\">\n                \u767B\u5F55\n              </div>\n              <div class=\"login_check active\">\n                \u6CE8\u518C\n              </div>\n            </div>\n            <img src=\"./img/sign_success.png\" alt=\"\" class=\"success_img\">\n            <div class=\"h1\">\n              \u60A8\u7684\u62A5\u540D\u4FE1\u606F\u5DF2\u63D0\u4EA4\u7ED9\u5DE5\u4F5C\u4EBA\u5458\u5BA1\u6838\n            </div>\n            <div class=\"tips\">\n              \u5BA1\u6838\u7ED3\u679C\u5C06\u4F1A\u901A\u8FC7\u77ED\u4FE1\uFF0C<br>\u90AE\u4EF6\u7B49\u65B9\u5F0F\u901A\u77E5\uFF0C\u8BF7\u60A8\u8010\u5FC3\u7B49\u5F85\n            </div>\n          </template>\n        </div>\n      </div>\n    </div>\n  </div>"
   });
   var app = new Vue({
     el: "#app",
@@ -536,7 +485,7 @@ $(function() {
           openAgenda: true,
           // 是否开启大会议程
           openReYery: true,
-          // 是否开启精彩回顾
+          // 是否开启精彩瞬间
           nav: [
             {
               name: "首页"
@@ -552,7 +501,7 @@ $(function() {
               name: "大会议程"
             },
             {
-              name: "精彩回顾"
+              name: "精彩瞬间"
             },
             {
               name: "往届回顾"
@@ -570,7 +519,7 @@ $(function() {
           code: "",
           isPoll: false,
           // 验证码
-          cacheListActive: 0,
+          cacheListActive: 0
         }),
         _defineProperty(_ref, "page", "one"),
         _defineProperty(_ref, "onlineList", []),
@@ -731,8 +680,8 @@ $(function() {
           token: that.token
         };
         if (!that.token) {
-          if(that.page){
-           location.replace('index.html'); 
+          if (that.page) {
+            location.replace("index.html");
           }
           that.isCheck = true;
           return;
@@ -751,7 +700,7 @@ $(function() {
             if (res.meta.message === "token被移除") {
               alert("你的账号当前正在其他设备登录");
             }
-            location.replace('index.html');
+            location.replace("index.html");
           }
           that.isCheck = true;
         });
@@ -856,7 +805,7 @@ $(function() {
             res.forEach(function(e, index) {
               active["home_" + index] = [];
             });
-            if(JSON.stringify(that.activeList) == '{}'){
+            if (JSON.stringify(that.activeList) == "{}") {
               that.activeList = Object.assign({}, that.activeList, active);
             }
             that.$nextTick(function() {
@@ -884,12 +833,12 @@ $(function() {
                   }
                 );
               }
-              if(navigator.userAgent.indexOf("UCBrowser")){
+              if (navigator.userAgent.indexOf("UCBrowser")) {
                 if (that.pageName() === "mobile") {
                   var time = setInterval(function() {
-                    if(that.isLogin){
-                      if(JSON.stringify(that.activeList) !='{}'){
-                        that.getViewRecord()
+                    if (that.isLogin) {
+                      if (JSON.stringify(that.activeList) != "{}") {
+                        that.getViewRecord();
                       }
                     }
                   }, 2500);

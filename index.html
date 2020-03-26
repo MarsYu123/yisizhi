@@ -50,7 +50,6 @@
 
 <body>
   <div id="app">
-
     <publis_login v-if="showLogin" @submit="login" @clear="showLogin = false"></publis_login>
     <div class="mb"></div>
     <div class="vertiv">
@@ -73,7 +72,7 @@
               大会议程
             </div>
             <div class="nav-item" v-if="openReYery">
-              精彩回顾
+              精彩瞬间
             </div>
             <div class="nav-item">
               往届回顾
@@ -551,11 +550,12 @@
       centerInsufficientSlides: true,
       spaceBetween: 10,
       slidesOffsetBefore: -45,
-      initialSlide: 1,
+      initialSlide: 0,
       navigation: {
         nextEl: '.review-next',
         prevEl: '.review-prev'
-      } // loop: true
+      },
+      loop: true
 
     }); //  加载议程数据
 
